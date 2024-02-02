@@ -1,0 +1,30 @@
+{
+  "name": "BEM Landing",
+  "version": "1.0.0",
+  "description": "BEM UNWIKU LANDING PAGE",
+  "scripts": {
+    "test": "npm run start",
+    "tail-dev": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch",
+    "tail-prod": "npx tailwindcss -i ./src/input.css -o ./public/css/final.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/"
+  },
+  "keywords": [
+    "Application",
+    "System",
+    "Landing Page"
+  ],
+  "author": "Arif Nur Rizqi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "homepage": "https://github.com/",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "tailwindcss": "^3.4.1"
+  }
+}

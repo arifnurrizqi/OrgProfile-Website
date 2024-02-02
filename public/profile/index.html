@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BEM Unwiku merupakan Lembaga Tinggi dalam kepemerintahan mahasiswa dilingkungan
+    Lembaga Kemahasiswaan Universitas Wijayakusuma Purwokerto. BEM Unwiku hadir untuk
+    mewujudkan cita-cita Yayasan Wijayakusuma yang ingin berperan secara aktif melaksanakan
+    Pembangunan Nasional. Dalam implementasi upaya perwujudan tersebut, BEM Unwiku
+    memiliki asa yang terus digelorakan dalam periode ini dengan sebutan Muara Perubahan.
+    BEM Unwiku dinahkodai oleh Presiden sebagai pimpinan BEM Unwiku dan didampingi oleh
+    Wakil Presiden serta dibantu oleh para Menteri Koordinator dan Menteri-Menterinya.">
+    <meta name="author" content="Arif Nur Rizqi">
+    <title>BEM Unwiku 2022 | Kabinet Muara Perubahan</title>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5dist/flowbite.min.css" />
+    <link href="../dist/css/final.css" rel="stylesheet">
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Start -->
+    <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+        <div class="container"> 
+            <div class="relative flex items-center justify-between">
+            <div class="px-4">
+                <a href="../index.html#home" class="block py-6 text-lg font-bold text-primary">BEM UNWIKU</a>
+            </div>
+            <div class="flex items-center px-4">
+                <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+                <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+                <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+                </button>
+
+                <nav id="nav-menu" class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-slate-400 py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+                <ul class="block lg:flex">
+                    <li class="group">
+                    <a href="../index.html#home" class="mx-8 flex py-2 text-base text-white group-hover:text-primary dark:text-white">Home</a>
+                    </li>
+                    <li class="group">
+                    <a href="../index.html#about" class="mx-8 flex py-2 text-base text-white group-hover:text-primary dark:text-white">About</a>
+                    </li>
+                    <li class="group">
+                    <a href="../index.html#kajian" class="mx-8 flex py-2 text-base text-white group-hover:text-primary dark:text-white">Study</a>
+                    </li>
+                    <li class="group">
+                    <a href="../index.html#layanan" class="mx-8 flex py-2 text-base text-white group-hover:text-primary dark:text-white">Services</a>
+                    </li>
+                    <li class="group">
+                    <a href="../index.html#blog" class="mx-8 flex py-2 text-base text-white group-hover:text-primary dark:text-white">Blog</a>
+                    </li>
+                    <li class="group">
+                    <a href="../index.html#contact" class="mx-8 flex py-2 text-base text-white group-hover:text-primary dark:text-white">Contact</a>
+                    </li>
+                    <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                    <div class="flex">
+                        <span class="mr-2 text-sm text-slate-200">light</span>
+                        <input type="checkbox" class="hidden" id="dark-toggle" />
+                        <label for="dark-toggle">
+                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-800 p-1">
+                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                        </div>
+                        </label>
+                        <span class="ml-2 text-sm text-slate-200">dark</span>
+                    </div>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+            </div>
+        </div>
+        </header>
+        <!-- Header End -->
+
+        <!-- Hero Section Start -->
+        <section id="home" class="pt-36 dark:bg-dark bg-cover bg-no-repeat bg-center" style="background-image: url(../dist/img/crop.webp)">
+            <div class="pb-40 lg:py-40 bg-gradient-to-t from-white dark:from-dark">
+            <div class="container w-full te" >
+                <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:w-2/3">
+                    <h2 class="text-xl font-semibold text-primary md:text-2xl mb-8">Badan Eksekutif Mahasiswa </h2>
+                    <h1> <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl mb-3 uppercase">Universitas Wijayakusuma Purwokerto</span></h1>
+                    <h2 class="mb-5 text-xl font-medium text-slate-600 dark:text-slate-400 lg:text-2xl">Kabinet <span class="text-dark dark:text-white">Muara Perubahan</span></h2>
+                    <div class="flex items-start flex-wrap">
+                        <a href="#visi" class="rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Visi & Misi</a>
+                        <a href="#filosofi-logo" class="rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Filosofi Logo</a>
+                        <a href="#struktur-kabinet" class="rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Struktur Kabinet</a>
+                    </div>
+                </div>
+                <!-- <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class="relative mt-10 lg:right-0 lg:mt-9 p-10">
+                    <img src="img/logo.png" width="400px" alt="Logo Kabinetet Muara Perubahan" class="relative z-10 mx-auto max-w-full filter shadow-xl rounded-full dark:shadow-slate-500"/>
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                        <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            fill="#14b8a6"
+                            d="M47.4,-51C59.2,-35.6,65.1,-17.8,63.4,-1.7C61.7,14.5,52.6,28.9,40.8,36.6C28.9,44.2,14.5,45,-2,47C-18.4,49,-36.8,52.1,-45.4,44.5C-53.9,36.8,-52.5,18.4,-51.2,1.3C-49.9,-15.8,-48.7,-31.7,-40.2,-47.1C-31.7,-62.4,-15.8,-77.3,1,-78.3C17.8,-79.2,35.6,-66.3,47.4,-51Z"
+                            transform="translate(100 100) scale(1.1)"
+                        />
+                        </svg>
+                    </span>
+                    </div>
+                </div> -->
+                <div class="w-full lg:w-1/3 text-center lg:justify-start justify-center lg:flex hidden">
+                    <div class="flex items-end lg:pl-16 pl-0" style="z-index: 1">
+                        <div class="container mx-auto flex flex-wrap items-center">
+                        <div class="card rounded-xl p-5 bg-white flex flex-col md:ml-auto w-full mt-10 md:mt-0 space-y-5">
+                            <div class="flex items-center space-x-4">
+                            <div>
+                                <img
+                                src="../dist/img/logo.png" width="50"
+                                alt="" />
+                            </div>
+                            <div class="text-left">
+                                <p class="font-semibold text-base mb-1">bem_unwiku</p>
+                                <p class="font-light text-xs text-gray-1">
+                                BEM UNWIKU
+                                </p>
+                            </div>
+                            </div>
+                            <div class="grid grid-cols-2 text-left">
+                            <div>
+                                <p class="font-medium text-base mb-0.5" style="color: #ff7468">
+                                2,500+
+                                </p>
+                                <p class="font-light text-xs text-gray-1">
+                                Followers
+                                </p>
+                            </div>
+                            <div>
+                                <p class="font-medium text-base mb-0.5" style="color: #1b8171">
+                                600+
+                                </p>
+                                <p class="font-light text-xs text-gray-1">
+                                Postingan
+                                </p>
+                            </div>
+                            </div>
+                            <a href="https://instagram.com/bem_unwiku" 
+                            target="_blank" rel="noopener noreferrer" class="bg-primary font-semibold text-white text-base py-3 px-12 mb-0.5 rounded-xl hover:opacity-80 hover:shadow-lg">
+                            Follow me
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- Visi & Misi Section Start -->
+        <section id="visi" class=" pt-20 lg:pt-28 pb-32 dark:bg-dark">
+            <div class="container">
+                <h4 class="mb-3 px-4 text-lg font-bold uppercase text-dark dark:text-white text-center lg:text-left lg:text-primary lg:dark:text-primary">Visi & Misi</h4>
+                <h2 class="mb-5 px-4 text-3xl font-bold text-dark dark:text-white lg:text-4xl hidden lg:block">Kabinet Muara Perubahan</h2>
+                <div class="flex px-4 flex-wrap mb-8 lg:mb-0">
+                    <div class="w-full lg:w-1/3 lg:hidden">
+                        <img src="../dist/img/logo2.png" width="500px" alt="Logo Kabinetet Muara Perubahan" class="relative mx-auto max-w-full filter rounded-md dark:shadow-slate-500 mb-8"/>
+                    </div>
+                    <div class="w-full lg:w-1/3 hidden lg:block">
+                        <img src="../dist/img/dartboard.webp" width="250px" alt="Logo Kabinetet Muara Perubahan" class="relative mx-auto max-w-full filter rounded-md dark:shadow-slate-500 mb-8 lg:mb-0"/>
+                    </div>
+                    <div class="w-full flex items-center justify-center lg:px-16 lg:w-2/3">
+                    <div class="max-w-4xl rounded-2xl p-8 bg-slate-100 dark:bg-slate-800 lg:bg-white lg:p-0 lg:dark:bg-dark text-center lg:text-left">
+                        <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:text-3xl">Visi</h3>
+                        <p class="text-base font-medium text-secondary lg:text-lg">
+                        BEM Unwiku sebagai harapan bersama dalam <b class="text-slate-600 dark:text-slate-400"> berkarya </b>, <b class="text-slate-600 dark:text-slate-400"> bersinergi </b> dan <b class="text-slate-600 dark:text-slate-400"> berkolaborasi </b> untuk menebar kebermanfaatan bagi Unwiku dan Indonesia.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="flex px-4 flex-wrap">
+                    <div class="w-full flex items-center justify-center lg:w-3/5">
+                        <div class="w-full bg-slate-100 p-8 dark:bg-slate-800 rounded-2xl lg:bg-white lg:p-0 lg:dark:bg-dark">
+                            <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:text-3xl text-center lg:text-left">Misi</h3>
+                            <ul class="space-y-2 max-w-full list-inside text-gray-500 dark:text-gray-400 text-justify">
+                                <li class="flex text-base font-medium text-secondary lg:text-lg">
+                                    <svg class="w-4 h-4 mr-3 mt-0.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    Mewujudkan nuansa organisasi yang harmonis dengan membangun semangat kolaborasi antar unsur internal dalam BEM Unwiku.
+                                </li>
+                                <li class="flex text-base font-medium text-secondary lg:text-lg">
+                                    <svg class="w-4 h-4 mr-3 mt-0.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    Mengoptimalkan BEM Unwiku sebagairumah aspirasi, pelayanan, serta pengembangan mahasiswa yang inovatif, konstruktif dan progresif.
+                                </li>
+                                <li class="flex text-base font-medium text-secondary lg:text-lg">
+                                    <svg class="w-4 h-4 mr-3 mt-0.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    Memperkuat pergerakan dan pengabdian melalui diskusi dan pengawalan isu yang faktual.
+                                </li>
+                                <li class="flex text-base font-medium text-secondary lg:text-lg">
+                                    <svg class="w-4 h-4 mr-3 mt-0.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    Mengoptimalisasi pewadahan dan penyaluran bakat mahasiswa Unwiku untuk memberikan kebermanfaatan.
+                                </li>
+                                <li class="flex text-base font-medium text-secondary lg:text-lg">
+                                    <svg class="w-4 h-4 mr-3 mt-0.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    Memperkuat citra lembaga yang atraktif dan interaktif melalui optimalisasi media serta penguatan relasi kerja BEM Unwiku.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-2/5">
+                        <img src="../dist/img/rocket.webp" width="250px" alt="Logo Kabinetet Muara Perubahan" class="relative mx-auto max-w-full filter rounded-md dark:shadow-slate-500 hidden lg:block"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Visi & Misi Section End -->
+
+        <!-- filosofi logo Section Start -->
+        <section id="filosofi-logo" class="bg-slate-100 pt-32 pb-28 dark:bg-slate-800">
+            <div class="container">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-12 max-w-xl text-center">
+                <h4 class="text-lg font-semibold text-primary">Filosofi Logo</h4>
+                <h2 class="my-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Kabinet</h2>
+                <h2 class="mb-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Muara Perubahan</h2>
+                </div>
+                <!-- <div class="flex w-full flex-wrap justify-center px-4 lg:px-0 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-8 lg:px-3 md:w-1/3">
+                        <div class="w-full pt-4 pb-20 lg:px-6 px-8 dark:bg-slate-800 rounded-3xl shadow-md">
+                            <div class="overflow-hidden p-4 dark:bg-slate-800">
+                                <a href="">
+                                <img src="img/logo-bintang.png" alt="Menteri Sekretaris Kabinet" class="mx-auto w-52 lg:w-80"/>
+                                </a>
+                            </div>
+                            <h3 class=" mt-2 mb-3 text-xl font-semibold text-dark dark:text-white text-center rounded-full px-4 py-2">Bintang bersudut lima</h3>
+                            <p class="text-base font-medium text-secondary text-justify">Melambangkan sebuah cahaya yang menyinari semua lini di universitas dengan keceriaan & melambangkan pancasila sebagai pedoman yang diyakini oleh Mahasiswa Unwiku</p>
+                        </div>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-8 lg:px-3 md:w-1/3">
+                        <div class="w-full pt-4 pb-20 lg:px-6 px-8 dark:bg-slate-800 rounded-3xl shadow-md">
+                            <div class="overflow-hidden p-4 dark:bg-slate-800">
+                                <a href="">
+                                <img src="img/logo-bintang.png" alt="Menteri Sekretaris Kabinet" class="mx-auto w-52 lg:w-80"/>
+                                </a>
+                            </div>
+                            <h3 class=" mt-2 mb-3 text-xl font-semibold text-dark dark:text-white text-center rounded-full px-4 py-2">Bintang bersudut lima</h3>
+                            <p class="text-base font-medium text-secondary text-justify">Melambangkan sebuah cahaya yang menyinari semua lini di universitas dengan keceriaan & melambangkan pancasila sebagai pedoman yang diyakini oleh Mahasiswa Unwiku</p>
+                        </div>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-8 lg:px-3 md:w-1/3">
+                        <div class="w-full pt-4 pb-20 lg:px-6 px-8 dark:bg-slate-800 rounded-3xl shadow-md">
+                            <div class="overflow-hidden p-4 dark:bg-slate-800">
+                                <a href="">
+                                <img src="img/logo-bintang.png" alt="Menteri Sekretaris Kabinet" class="mx-auto w-52 lg:w-80"/>
+                                </a>
+                            </div>
+                            <h3 class=" mt-2 mb-3 text-xl font-semibold text-dark dark:text-white text-center rounded-full px-4 py-2">Bintang bersudut lima</h3>
+                            <p class="text-base font-medium text-secondary text-justify">Melambangkan sebuah cahaya yang menyinari semua lini di universitas dengan keceriaan & melambangkan pancasila sebagai pedoman yang diyakini oleh Mahasiswa Unwiku</p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="max-w-3xl mx-auto">
+                    <div id="indicators-carousel" class="relative" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative overflow-hidden rounded-3xl h-96">
+                            <!-- Item 1 -->
+                            <div class=" w-full duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20 bg-slate-200 dark:bg-dark" data-carousel-item="active">
+                                <div class="md:flex pt-6 pb-8 px-8 rounded-3xl absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:px-20">
+                                    <div class="p-2 md:w-5/12 md:flex md:items-center">
+                                        <a href="">
+                                        <img src="../dist/img/logo.png" alt="Logo" class="mx-auto w-36 md:w-48"/>
+                                        </a>
+                                    </div>
+                                    <div class="md:w-7/12 md:p-4">
+                                    <h3 class="lg:mb-2 text-base md:text-xl font-semibold text-dark dark:text-white text-center md:text-left md:px-0 rounded-full px-4 py-2">Warna penyusun</h3>
+                                    <p class="text-xs md:text-base font-medium text-secondary text-justify">Warna Orange : Memberi makna sang muara yang memiliki semangat tinggi untuk mengarungi perubahan. <br> Background putih : melambangkan perdamaian dan kesucian.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10 bg-slate-200 dark:bg-dark" data-carousel-item="">
+                                <div class="md:flex pt-6 pb-8 px-8 rounded-3xl absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:px-20">
+                                    <div class="p-2 md:w-5/12 md:flex md:items-center">
+                                        <a href="">
+                                        <img src="../dist/img/logo-bintang.png" alt="Logo" class="mx-auto w-36 md:w-48"/>
+                                        </a>
+                                    </div>
+                                    <div class="md:w-7/12 md:p-4">
+                                    <h3 class="lg:mb-2 text-base md:text-xl font-semibold text-dark dark:text-white text-center md:text-left md:px-0 rounded-full px-4 py-2">Bintang bersudut lima</h3>
+                                    <p class="text-xs md:text-base font-medium text-secondary text-justify">Melambangkan sebuah cahaya yang menyinari semua lini di universitas dengan keceriaan serta melambangkan Pancasila sebagai pedoman yang diyakini oleh Mahasiswa Unwiku.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform bg-slate-200 dark:bg-dark" data-carousel-item="">
+                                <div class="md:flex pt-6 pb-8 px-8 rounded-3xl absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:px-20">
+                                    <div class="p-2 md:w-5/12 md:flex md:items-center">
+                                        <a href="">
+                                        <img src="../dist/img/logo-garis-tiga.png" alt="Logo" class="mx-auto w-36 md:w-48"/>
+                                        </a>
+                                    </div>
+                                    <div class="md:w-7/12 md:p-4">
+                                    <h3 class="lg:mb-2 text-base md:text-xl font-semibold text-dark dark:text-white text-center md:text-left md:px-0 rounded-full px-4 py-2">Garis tiga mendayu</h3>
+                                    <p class="text-xs md:text-base font-medium text-secondary text-justify">Memberi makna Tri Darma keperguruan tinggi yang harus ditunaikan oleh Mahasiswa Unwiku.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform bg-slate-200 dark:bg-dark" data-carousel-item="">
+                                <div class="md:flex pt-6 pb-8 px-8 rounded-3xl absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:px-20">
+                                    <div class="p-2 md:w-5/12 md:flex md:items-center">
+                                        <a href="">
+                                        <img src="../dist/img/logo-garis-menyilang.png" alt="Logo" class="mx-auto w-36 md:w-48"/>
+                                        </a>
+                                    </div>
+                                    <div class="md:w-7/12 md:p-4">
+                                    <h3 class="lg:mb-2 text-base md:text-xl font-semibold text-dark dark:text-white text-center md:text-left md:px-0 rounded-full px-4 py-2">Garis melekuk menyilang</h3>
+                                    <p class="text-xs md:text-base font-medium text-secondary text-justify"> Melambangkan kebersamaan untuk kolaborasi dan bersinergi dengan elemen apapun.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10 bg-slate-200 dark:bg-dark" data-carousel-item="">
+                                <div class="md:flex pt-6 pb-8 px-8 rounded-3xl absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:px-20">
+                                    <div class="p-2 md:w-5/12 md:flex md:items-center">
+                                        <a href="">
+                                        <img src="../dist/img/logo-kelopak.png" alt="Logo" class="mx-auto w-36 md:w-48"/>
+                                        </a>
+                                    </div>
+                                    <div class="md:w-7/12 md:p-4">
+                                    <h3 class="lg:mb-2 text-base md:text-xl font-semibold text-dark dark:text-white text-center md:text-left md:px-0 rounded-full px-4 py-2">Lima Kelopak Bunga Wijayakusuma</h3>
+                                    <p class="text-xs md:text-base font-medium text-secondary text-justify"> Melambangkan lima fakultas yang ada di Universitas Wijayakusuma Purwokerto </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 6 -->
+                            <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10 bg-slate-200 dark:bg-dark" data-carousel-item="">
+                                <div class="md:flex pt-6 pb-8 px-8 rounded-3xl absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 md:px-20">
+                                    <div class="p-2 md:w-5/12 md:flex md:items-center">
+                                        <a href="">
+                                        <img src="../dist/img/logo-lingkaran.png" alt="Logo" class="mx-auto w-36 md:w-48"/>
+                                        </a>
+                                    </div>
+                                    <div class="md:w-7/12 md:p-4">
+                                    <h3 class="lg:mb-2 text-base md:text-xl font-semibold text-dark dark:text-white text-center md:text-left md:px-0 rounded-full px-4 py-2">Lingkaran</h3>
+                                    <p class="text-xs md:text-base font-medium text-secondary text-justify"> Melambangkan simbol dari konsentrasi serta fokus yang tinggi dalam menggapai tujuan bersama untuk menunaikan hal baik.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+                            <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                            <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                            <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                            <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="5"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-600/30 group-hover:bg-white/50 dark:group-hover:bg-gray-600/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-600/70 group-focus:outline-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-600/30 group-hover:bg-white/50 dark:group-hover:bg-gray-600/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-600/70 group-focus:outline-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- filodsofi logo Section End -->
+
+        <!-- Struktur kabinet Section Start -->
+        <section id="struktur-kabinet" class="pt-32 pb-32 dark:bg-dark">
+            <div class="container">
+            <div class="w-full px-4">
+                <div class="mx-auto mb-8 max-w-xl text-center">
+                <h4 class="mb-2 text-lg font-semibold text-primary">Struktur Kabinet</h4>
+                <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-4xl">BEM UNWIKU 2022</h2>
+                <p class="text-md font-medium text-secondary md:text-lg">Klik foto menteri untuk melihat detail kementrian</p>
+                </div>
+            </div>
+            
+            <div class="w-full">
+                <!-- Presiden & Wapres -->
+                <div class="max-w-full mb-10 flex items-center justify-center">
+                    <h4 class="w-full lg:max-w-sm text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Presiden & Wakil Presiden</h4>  
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-44 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-4 lg:px-8 md:w-1/2">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/Andi Sustiawan_Presbem-2.webp" alt="Presiden Mahasiswa" class="mt-4 mx-auto w-56 lg:w-80"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Presiden</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Andi Sustiawan</p>
+                            <p class="text-base font-medium text-secondary text-center">Ilmu Hukum 2019</p>
+                        </div>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-4 lg:px-8 md:w-1/2">
+                        <div class="w-full h-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/Afif Verdianzah_wapres.webp" alt=" Wakil Presiden Mahasiswa" class="mt-3 mx-auto w-56 lg:w-80"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Wakil Presiden</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Afif Verdianzah</p>
+                            <p class="text-base font-medium text-secondary text-center">Manajemen 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- kemenkoan manajemen kabinet -->
+                <div class="max-w-full mt-8 flex items-center justify-center">
+                    <h4 class="w-full lg:max-w-sm text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Manajemen Kabinet</h4>  
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-80 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-14 lg:px-8">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/Arif Nur Rizqi-stafmedkom (3).webp" alt="Menko Manajemen Kabinet" class="mx-auto w-56 lg:w-56"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-6 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300">Menko Manajemen Kabinet</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Arif Nur Rizqi</p>
+                            <p class="text-base font-medium text-secondary text-center">Teknik Elektro 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-4 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/seskab.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Bulan Larasati_Menteri Seskab.webp" alt="Menteri Sekretaris Kabinet" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Seskab</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Wulan Larasati</p>
+                            <p class="text-base font-medium text-secondary text-center">Administrasi Publik 2021</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/menkeu.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Fahrani Shafa S_Menkeu.webp" alt="Menteri Keuangan" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Keuangan</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Fahrani Shafa S</p>
+                            <p class="text-base font-medium text-secondary text-center">Manajemen 2020</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/medkom.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Astri Yuliani-medkom.webp" alt="Menteri Medkominfo" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Medkominfo</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Astri Yuliani</p>
+                            <p class="text-base font-medium text-secondary text-center">Manajemen 2020</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Khavisa Dwina Ramaranjani.webp" alt="Pelaksana Tugas Menteri Medkominfo" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Plt Medkominfo</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Khafisa Dwina R</p>
+                            <p class="text-base font-medium text-secondary text-center">Manajemen 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- kemenkoan relasi publik -->
+                <div class="max-w-full mt-8 flex items-center justify-center">
+                    <h4 class="w-full lg:max-w-sm text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Relasi Publik</h4>  
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-80 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-8 lg:px-8">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/Tri Ayu S_menko Respub.webp" alt="Menko Relasi Publik" class="mx-auto w-56 lg:w-56"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-6 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menko Relasi Publik</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Tri Ayu Suciana</p>
+                            <p class="text-base font-medium text-secondary text-center">Teknik Sipil 2020</p>
+                        </div>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-8 lg:px-8">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/Angelia Laras Kurniasih_Mentri SPM (1).webp" alt="Pelaksana Tugas Menko Relasi Publik" class="mx-auto w-56 lg:w-56"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-6 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 "> Plt Menko Relasi Publik</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Angelia Laras K</p>
+                            <p class="text-base font-medium text-secondary text-center">Teknik Sipil 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-4 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/dapus.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Nur Fatimah_Dapus.webp" alt="Menteri Dalam Kampus" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Dapus</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Nur Fatimah</p>
+                            <p class="text-base font-medium text-secondary text-center">Manajemen 2020</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/lupus.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/SHAFY.webp" alt="Menteri Luar Kampus" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Lupus</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Shafy Nur Farah</p>
+                            <p class="text-base font-medium text-secondary text-center">Manajemen 2021</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/spm.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Angelia Laras Kurniasih_Mentri SPM (1).webp" alt="Menteri SPM" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri SPM</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Angelia Laras K</p>
+                            <p class="text-base font-medium text-secondary text-center">Teknik Sipil 2020</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Faizal Adi P_Staff lupus_.webp" alt="Pelaksana Tugas Menteri SPM" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Plt Menteri SPM</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Faizal Adi Purnomo</p>
+                            <p class="text-base font-medium text-secondary text-center">Teknik Elektro 2021</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- kemenkoan politik pergerakan -->
+                <div class="max-w-full mt-8 flex items-center justify-center">
+                    <h4 class="w-full lg:max-w-sm text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Politik Pergerakan</h4>  
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-80 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-8 lg:px-8">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/Alan Ardhian Ramadhan_Menko polper.webp" alt="Menko Politik Pergerakan" class="mx-auto w-56 lg:w-56"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-6 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menko Politik Pergerakan</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Alan Ardhian Ramadhan</p>
+                            <p class="text-base font-medium text-secondary text-center">Administrasi Publik 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-4 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/anstrat.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/TEDI WIRMANSAH_MENTERI ANSTRAT.webp" alt="Menteri Anstrat" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Anstrat</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Tedi Wirmansah</p>
+                            <p class="text-base font-medium text-secondary text-center">Administrasi Publik 2021</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/pp.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Lili Utami.webp" alt="Menteri Pemberdaya Perempuan" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri PP</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Lili Utami</p>
+                            <p class="text-base font-medium text-secondary text-center">Ilmu Hukum 2020</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/adkesma.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Echa hermalia_menteri Adkesma_.webp" alt="Menteri Adkesma" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Adkesma</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Echa hermalia P</p>
+                            <p class="text-base font-medium text-secondary text-center">Administrasi Publik 2021</p>
+                        </div></a>
+                    </div>
+                </div>
+                <!-- kemenkoan kemahasiswaan-->
+                <div class="max-w-full mt-8 flex items-center justify-center">
+                    <h4 class="w-full lg:max-w-sm text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Kemahasiswaan</h4>  
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-80 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-8 lg:px-8">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/CHARLES.webp" alt="Menko Kemahasiswaan" class="mx-auto w-56 lg:w-56"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-6 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menko Kemahasiswaan</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Anthony Charles</p>
+                            <p class="text-base font-medium text-secondary text-center">Ilmu Hukum 2020</p>
+                        </div>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-8 lg:px-8">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                <img src="../dist/img/anggota/Alan Ardhian Ramadhan_Menko polper.webp" alt="Pelaksana Tugas Menko Politik Pergerakan" class="mx-auto w-56 lg:w-56"/>
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-md font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-6 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Plt Menko Kemahasiswaan</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Alan Ardhian Ramadhan</p>
+                            <p class="text-base font-medium text-secondary text-center">Administrasi Publik 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full flex-wrap justify-center px-4 lg:px-4 xl:mx-auto xl:w-10/12">
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/pm.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Bobby Putra Rezky Ramadhani _ Mentri Pemberdayaan Mahasiswa.webp" alt="Menteri PM" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri PM</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Bobby Putra Rezky R</p>
+                            <p class="text-base font-medium text-secondary text-center">Ilmu Hukum 2021</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/rpk.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Ferdian Juan Permana H. _Menteri RPK.webp" alt="Menteri RPK" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full  px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri RPK</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Ferdian Juan Permana H</p>
+                            <p class="text-base font-medium text-secondary text-center">Teknik Sipil 2020</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <a href="../struktur/wirekraf.html">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/PrasetyaNurS_MenteriWirekraf.webp" alt="Menteri Wirekraf" class="mx-auto w-56 lg:w-80"/>
+                                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Menteri Wirekraf</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Prasetya Nur S</p>
+                            <p class="text-base font-medium text-secondary text-center">Ilmu Hukum 2020</p>
+                        </div></a>
+                    </div>
+                    <div class="max-w-full mb-12 md:px-1 lg:px-6 md:w-1/3">
+                        <div class="w-full py-4 lg:px-4 px-4 rounded-3xl shadow-md dark:bg-slate-800">
+                            <div class="overflow-hidden rounded-3xl shadow-md px-8 dark:bg-slate-800">
+                                
+                                <img src="../dist/img/anggota/Tri Ayu Mulyaningsih_Staff wirekraf_.webp" alt="Pelaksana Tugas Menteri Wirekraf" class="mx-auto w-56 lg:w-80"/>
+                
+                            </div>
+                            <h3 class=" mt-4 mb-3 text-lg font-semibold text-white dark:text-dark text-center bg-gradient-to-t from-slate-500 to-dark rounded-full px-8 py-2 dark:bg-gradient-to-t dark:from-slate-500 dark:to-slate-300 ">Plt Menteri Wirekraf</h3>
+                            <p class="text-xl font-bold text-dark text-center mb-2 dark:text-slate-100">Tri Ayu Mulyaningsih</p>
+                            <p class="text-base font-medium text-secondary text-center">Administrasi Publik 2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Struktur kabinet Section End -->
+    
+        <!-- Footer Start -->
+        <footer class="bg-dark pt-24 pb-12">
+            <div class="container">
+            <div class="flex flex-wrap">
+                <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+                <h2 class="mb-5 text-4xl font-bold text-white">BEM UNWIKU</h2>
+                <h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
+                <a href="mailto:medkominfobemunwiku@gmail.com" class="hover:text-orange-400">medkominfobemunwiku@gmail.com</a>
+                <p class="mt-2">Jl. Raya Beji Karangsalam No.25 <br> Kec. Kedungbanteng, Kab. Banyumas, <br> Jawa Tengah 53152</p>
+                </div>
+                
+                <div class="mb-12 w-full px-4 md:w-1/3">
+                <h3 class="mb-5 text-xl font-semibold text-white">Kategori Tulisan</h3>
+                <ul class="text-slate-300">
+                    <li>
+                    <a href="https://news.bem-unwiku.com/kategori/detail/press-release" class="mb-3 inline-block text-base hover:text-primary">Press Release</a>
+                    </li>
+                    <li>
+                    <a href="https://news.bem-unwiku.com/kategori/detail/kajian" class="mb-3 inline-block text-base hover:text-primary">Kajian</a>
+                    </li>
+                    <li>
+                    <a href="https://news.bem-unwiku.com/postingan" class="mb-3 inline-block text-base hover:text-primary">Semua Tulisan</a>
+                    </li>
+                </ul>
+                </div>
+                <div class="mb-12 w-full px-4 md:w-1/3">
+                <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
+                <ul class="text-slate-300">
+                    <li>
+                    <a href="#home" class="mb-3 inline-block text-base hover:text-primary">Beranda</a>
+                    </li>
+                    <li>
+                    <a href="#about" class="mb-3 inline-block text-base hover:text-primary">About</a>
+                    </li>
+                    <li>
+                    <a href="profile/" class="mb-3 inline-block text-base hover:text-primary">Profile</a>
+                    </li>
+                    <li>
+                    <a href="https://news.bem-unwiku.com/konsultasi" class="mb-3 inline-block text-base hover:text-primary">Forum</a>
+                    </li>
+                    <li>
+                    <a href="https://news.bem-unwiku.com/halaman/detail/open-recruitment" class="mb-3 inline-block text-base hover:text-primary">Open Recruitment</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="w-full border-t border-slate-700 pt-10">
+                <div class="mb-5 flex items-center justify-center">
+                <!-- Youtube -->
+                <a
+                    href="https://www.youtube.com/channel/UCtRSMC8d3r5pLkBHa-Kflsw"
+                    target="_blank"
+                    class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>YouTube</title>
+                    <path
+                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                    </svg>
+                </a>
+    
+                <!-- Instagram -->
+                <a
+                    href="https://instagram.com/bem_unwiku"
+                    target="_blank"
+                    class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Instagram</title>
+                    <path
+                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                    />
+                    </svg>
+                </a>
+    
+                <!-- Twitter -->
+                <a
+                    href="https://twitter.com/Bem_Unwiku"
+                    target="_blank"
+                    class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Twitter</title>
+                    <path
+                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                    </svg>
+                </a>
+    
+                <!-- TikTok -->
+                <a
+                    href="https://tiktok.com/@bemunwiku"
+                    target="_blank"
+                    class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>TikTok</title>
+                    <path
+                        d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                    />
+                    </svg>
+                </a>
+    
+                <!-- Facebook -->
+                <a
+                    href="https://facebook.com/bemunwiku"
+                    target="_blank"
+                    class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                >
+                    <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Facebook</title>
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                </div>
+                <p class="text-center text-xs font-medium text-slate-500">
+                Made with <span class="text-pink-500">❤️</span> by <a href="https://instagram.com/arifnurrizqi_" target="_blank" class="font-bold text-primary">Kementrian Media Komunikasi dan Informasi 
+                </p>
+            </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+    
+        <!-- Back to top Start -->
+        <a href="#home" class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse" id="to-top">
+            <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+        </a>
+        <!-- Back to top End -->
+
+    <script src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>
+    <script src="../dist/js/script.js"></script>
+</body>
+</html>
