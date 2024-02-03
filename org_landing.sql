@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 02, 2024 at 06:34 PM
+-- Generation Time: Feb 03, 2024 at 05:18 PM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bem_landing`
+-- Database: `org_landing`
 --
 
 -- --------------------------------------------------------
@@ -29,14 +29,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `about` (
   `id` bigint NOT NULL,
-  `id_landing` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `visi` text COLLATE utf8mb4_general_ci NOT NULL,
-  `misi` text COLLATE utf8mb4_general_ci NOT NULL,
-  `filosofi` text COLLATE utf8mb4_general_ci NOT NULL,
-  `booklet` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `img_cover` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `img_visi` varchar(128) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'visi.webp',
-  `img_misi` varchar(128) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'misi.webp'
+  `id_landing` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `visi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `misi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `filosofi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `booklet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `img_cover` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `img_visi` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'visi.webp',
+  `img_misi` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'misi.webp'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -55,13 +55,13 @@ INSERT INTO `about` (`id`, `id_landing`, `visi`, `misi`, `filosofi`, `booklet`, 
 
 CREATE TABLE `article` (
   `id` bigint NOT NULL,
-  `id_kategori` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
-  `title` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `slug` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
-  `content` text COLLATE utf8mb4_general_ci,
-  `gambar` varchar(64) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `keterangan_gambar` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `draft` enum('true','false') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'true',
+  `id_kategori` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `title` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `slug` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `gambar` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `keterangan_gambar` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `draft` enum('true','false') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'true',
   `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -97,13 +97,20 @@ INSERT INTO `article` (`id`, `id_kategori`, `title`, `slug`, `content`, `gambar`
 --
 
 CREATE TABLE `feedback` (
-  `id` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `message` text COLLATE utf8mb4_general_ci NOT NULL,
-  `status` varchar(2) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `id` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `status` varchar(2) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `name`, `email`, `message`, `status`, `created_at`) VALUES
+('65be7507134126.87700070', '.htaccess', 'mbuhsapa399@gmail.com', 'pesann lur', '0', '2024-02-03 17:16:55');
 
 -- --------------------------------------------------------
 
@@ -113,10 +120,10 @@ CREATE TABLE `feedback` (
 
 CREATE TABLE `filosofi_logo` (
   `id` bigint NOT NULL,
-  `id_landing` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `img_logo` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `nama_element` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `makna_element` text COLLATE utf8mb4_general_ci
+  `id_landing` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `img_logo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nama_element` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `makna_element` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -143,9 +150,9 @@ INSERT INTO `filosofi_logo` (`id`, `id_landing`, `img_logo`, `nama_element`, `ma
 
 CREATE TABLE `fokus_isu` (
   `id` bigint NOT NULL,
-  `id_landing` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `lingkup` varchar(64) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `poin_fokus` text COLLATE utf8mb4_general_ci
+  `id_landing` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `lingkup` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `poin_fokus` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -168,16 +175,16 @@ INSERT INTO `fokus_isu` (`id`, `id_landing`, `lingkup`, `poin_fokus`) VALUES
 
 CREATE TABLE `identitas` (
   `id` bigint NOT NULL,
-  `nama_website` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `email` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `address` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `url` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `maps` text COLLATE utf8mb4_general_ci,
-  `keyword` text COLLATE utf8mb4_general_ci,
-  `description` text COLLATE utf8mb4_general_ci,
-  `sosmed` text COLLATE utf8mb4_general_ci,
-  `no_telp` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `favicon` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `nama_website` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `address` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `url` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `maps` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `keyword` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `sosmed` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `no_telp` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `favicon` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -195,11 +202,11 @@ INSERT INTO `identitas` (`id`, `nama_website`, `email`, `address`, `url`, `maps`
 
 CREATE TABLE `kategori` (
   `id` int NOT NULL,
-  `nama_kategori` varchar(50) COLLATE latin1_general_ci NOT NULL,
-  `kategori_seo` varchar(100) COLLATE latin1_general_ci NOT NULL,
-  `status` enum('true','false') COLLATE latin1_general_ci NOT NULL DEFAULT 'true',
+  `nama_kategori` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `kategori_seo` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `status` enum('true','false') CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL DEFAULT 'true',
   `sidebar` int NOT NULL,
-  `gambar_utama` text COLLATE latin1_general_ci NOT NULL
+  `gambar_utama` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
@@ -545,7 +552,8 @@ INSERT INTO `kunjungan` (`ip`, `tanggal`, `hits`, `online`) VALUES
 ('::1', '2024-01-31', 229, '1706709299'),
 ('192.168.0.16', '2024-02-01', 12, '1706749410'),
 ('::1', '2024-02-01', 351, '1706815827'),
-('::1', '2024-02-02', 158, '1706895623');
+('::1', '2024-02-02', 159, '1706901139'),
+('::1', '2024-02-03', 9, '1706980615');
 
 -- --------------------------------------------------------
 
@@ -554,15 +562,15 @@ INSERT INTO `kunjungan` (`ip`, `tanggal`, `hits`, `online`) VALUES
 --
 
 CREATE TABLE `landing` (
-  `id` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `organisasi` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
-  `universitas` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
-  `kabinet` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
-  `tahun_periode` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `about` text COLLATE utf8mb4_general_ci,
-  `logo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `slug` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
-  `status` enum('true','false') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'false'
+  `id` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `organisasi` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `universitas` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `kabinet` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tahun_periode` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `about` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `logo` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `slug` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `status` enum('true','false') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'false'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -582,18 +590,18 @@ INSERT INTO `landing` (`id`, `organisasi`, `universitas`, `kabinet`, `tahun_peri
 CREATE TABLE `pengurus` (
   `id` bigint NOT NULL,
   `id_ref` bigint DEFAULT NULL,
-  `id_landing` varchar(32) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `level` varchar(1) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `nama` varchar(64) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `jabatan` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `about` text COLLATE utf8mb4_general_ci,
-  `prodi` varchar(64) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `angkatan` varchar(4) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `foto` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `ig` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `tiktok` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `fb` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `twiter` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `id_landing` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `level` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nama` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `jabatan` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `about` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `prodi` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `angkatan` varchar(4) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `foto` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `ig` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `tiktok` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `fb` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `twiter` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -720,10 +728,10 @@ INSERT INTO `pengurus` (`id`, `id_ref`, `id_landing`, `level`, `nama`, `jabatan`
 
 CREATE TABLE `service` (
   `id` int NOT NULL,
-  `id_landing` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `name_service` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `keterangan` text COLLATE utf8mb4_general_ci,
-  `link` text COLLATE utf8mb4_general_ci
+  `id_landing` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `name_service` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `link` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -735,6 +743,27 @@ INSERT INTO `service` (`id`, `id_landing`, `name_service`, `keterangan`, `link`)
 (4, '659ae8b6052810.72512880', 'Hotline Unwiku', 'Hotline Unwiku merupakan Layanan khusus yang dikelola oleh Adkesma untuk mahasiswa Unwiku sebagai upaya penjaringan aspirasi yang masuk baik itu berupa aspirasi sarana dan prasarana, kebijakan kampus, pembayaran akademik, ataupun masukan untuk BEM Unwiku.', 'https://bit.ly/hotline-unwiku'),
 (5, '65916f11ca88f6.76787631', 'Aduan Pelecehan Seksual', 'Aduan pelecehan seksual merupakan layanan yang dikelola oleh kementerian pemberdayaan perempuan khusus untuk menerima keresahan baik itu perilaku atau perbuatan yang mengindikasikan pelecehan seksual ataupun sudah terjadi pelecehan seksual.', '#contact'),
 (6, '65916f11ca88f6.76787631', 'Business Promotion', 'Business Promotion ini adalah salah satu program kerja dari Kementerian Kewirausahaan dan Ekonomi Kreatif BEM Unwiku. Tujuan dari program kerja ini yaitu untuk membantu para pelaku umkm bisnis mahasiswa unwiku dengan mempromosikanya melalui akun media sosial.', 'https://forms.gle/AHykt8sxqsUaeBeJ8');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `templates`
+--
+
+CREATE TABLE `templates` (
+  `id_template` bigint NOT NULL,
+  `nama_template` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+  `author` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
+  `folder` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+  `status` enum('true','false') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'false'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `templates`
+--
+
+INSERT INTO `templates` (`id_template`, `nama_template`, `author`, `folder`, `status`) VALUES
+(1, 'Simple', 'Arnur ', 'simple', 'true');
 
 -- --------------------------------------------------------
 
@@ -759,7 +788,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `username`, `password`, `avatar`, `created_at`, `password_updated_at`, `last_login`) VALUES
-('6118b2a943acc2.78631959', 'Adminn', 'admin@gmail.com', 'admin', '$2y$10$7MzYsU1xl/ucMorLkY1bgOPTInJ3Zqw86jdKR5JqDQyknDuVFj4s.', NULL, '2021-08-14 23:22:33', '2024-01-28 16:36:32', '2024-02-02 10:00:50');
+('6118b2a943acc2.78631959', 'Adminn', 'admin@gmail.com', 'admin', '$2y$10$7MzYsU1xl/ucMorLkY1bgOPTInJ3Zqw86jdKR5JqDQyknDuVFj4s.', NULL, '2021-08-14 23:22:33', '2024-02-02 12:23:54', '2024-02-03 09:18:53');
 
 --
 -- Indexes for dumped tables
@@ -826,6 +855,12 @@ ALTER TABLE `service`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `templates`
+--
+ALTER TABLE `templates`
+  ADD PRIMARY KEY (`id_template`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -876,6 +911,12 @@ ALTER TABLE `pengurus`
 --
 ALTER TABLE `service`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `templates`
+--
+ALTER TABLE `templates`
+  MODIFY `id_template` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
