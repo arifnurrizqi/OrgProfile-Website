@@ -16,7 +16,7 @@
 
 			<h1 class="text-xl font-bold mb-2.5">User account</h1>
 
-			<div class="w-full rounded-2xl bg-gradient-to-r from-slate-50 to-primary/50 p-4 border-2">
+			<div class="w-full rounded-2xl bg-gradient-to-r from-slate-50 to-primary/50 p-4 border-2 mb-3">
 				<span class="text-lg font-bold">Avatar</span>
 				<div class="mt-4 flex gap-4">
 					<?php
@@ -31,6 +31,59 @@
 					</div>
 				</div>
 			</div>
+			
+			<div id="accordion-collapse" data-accordion="collapse">
+				<h2 id="accordion-collapse-heading-2">
+					<button type="button" class="flex items-center justify-between w-full p-3 font-medium rtl:text-right border-2 rounded-2xl border-gray-200  dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-primary/20 dark:hover:bg-gray-800 gap-3 transition duration-300 ease-in-out cursor-pointer" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+					<span class="text-lg font-bold">-- Template Website</span>
+						<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0 transition-transform duration-200 transform" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+						</svg>
+					</button>
+				</h2>
+				<div id="accordion-collapse-body-2" class="hidden mt-1" aria-labelledby="accordion-collapse-heading-2">
+					<div class="p-3 border rounded-2xl border-gray-200 dark:border-gray-700">
+						<table class="table rounded-xl w-full">
+							<thead>
+								<tr class="border-b-2 border-slate-300 mb-2">
+									<th class="text-left pb-2 ">Template</th>
+									<th style="width: 10%;" class="text-center pb-2 ">Status</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ($data_template as $template) : ?>
+									<tr class="border-b hover:bg-white">
+										<td class="">
+											<p class="font-medium whitespace-nowrap"><?= $template->nama_template ?></p>
+											<span class="text-gray-500 text-xs font-medium">Dibuat oleh <?= $template->author ?></span>
+										</td>
+										<td class="px-6">
+											<form class="js-form flex justify-center items-center flex-wrap" method="POST" action="<?= site_url('admin/setting/submit_status_template') ?>">
+												<label class="relative inline-flex items-center cursor-pointer justify-center">
+													<?php
+													$get_status = $template->status == 'true' ? 'checked' : '';
+													$value = $get_status == 'checked' ? 'true' : 'false';
+													?>
+													<input type="hidden" name="api_key" value="<?= $template->id_template; ?>" />
+													<input type="checkbox" class="sr-only peer js-switch" id="switch" name="status_feedback" value="<?= $value; ?>" <?php echo $get_status; ?> <?php if ($template->status === 'true') : ?> disabled <?php endif ?> />
+													<div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary/40 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all  peer-checked:bg-primary"></div>
+												</label>
+												<?php if ($template->status === 'false') : ?>
+													<span class="text-xs font-medium text-gray-900 whitespace-nowrap mt-1">Non-aktif</span>
+												<?php else : ?>
+													<span class="text-xs font-medium text-gray-900 mt-1">Aktif</span>
+												<?php endif ?>
+											</form>
+										</td>
+									</tr>
+								<?php endforeach ?>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
 			<div class="w-full rounded-2xl border-2 p-3 mt-4">
 				<div class="flex flex-nowrap justify-between">
 					<span class="text-lg font-bold">Profile Website</span>
@@ -127,8 +180,23 @@
 
 		</div>
 	</div>
+
+	<script src="<?= base_url('public/js/flowbite.js') ?>"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+	<script>
+		const switches = document.querySelectorAll('.js-switch');
+		const forms = document.querySelectorAll('.js-form');
+
+		switches.forEach(function(switchElem, index) {
+			switchElem.addEventListener('change', function() {
+				this.value = this.checked;
+				forms[index].submit();
+			});
+		});
+	</script>
+
 	<?php if ($this->session->flashdata('message')) : ?>
-		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script>
 			const Toast = Swal.mixin({
 				toast: true,

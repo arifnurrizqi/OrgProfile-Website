@@ -8,6 +8,7 @@ class Setting extends CI_Controller
 		$this->load->model('auth_model');
 		$this->load->model('feedback_model');
 		$this->load->model('identitas_model');
+		$this->load->model('templates_model');
 		if (!$this->auth_model->current_user()) {
 			redirect('auth/login');
 		}
@@ -18,6 +19,7 @@ class Setting extends CI_Controller
 		$data['title'] = 'Settings';
 		$data['pesan'] = $this->feedback_model->check_pesan();
 		$data['profile'] = $this->identitas_model->get();
+		$data['data_template'] = $this->templates_model->get();
 		$data['current_user'] = $this->auth_model->current_user();
 		$this->load->view('admin/setting/setting', $data);
 	}
@@ -203,5 +205,16 @@ class Setting extends CI_Controller
 		}
 
 		$this->load->view('admin/setting/setting_edit_password_form.php', $data);
+	}
+
+	public function submit_status_template()
+	{
+		$api_key = trim($this->input->post('api_key'));
+
+		$update = $this->templates_model->update_status_template($api_key);
+		if ($update) {
+			$this->session->set_flashdata('message', 'Update berhasil.');
+			redirect(site_url('admin/setting'));
+		}
 	}
 }

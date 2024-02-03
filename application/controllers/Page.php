@@ -9,6 +9,7 @@ class Page extends CI_Controller
 		$this->load->model('landing_model');
 		$this->load->model('identitas_model');
 		$this->load->model('feedback_model');
+		$this->load->model('templates_model');
 	}
 	public function index()
 	{
@@ -23,7 +24,7 @@ class Page extends CI_Controller
 		// contact form
 		$this->contact_form();
 
-		$this->load->view('simple/home', $data);
+		$this->load->view( $this->getTemplate() . '/home', $data);
 	}
 
 	public function about($slug = null)
@@ -47,7 +48,7 @@ class Page extends CI_Controller
 
 		$data['title'] = 'About BEM UNWIKU ' . $data['landing'][0]->slug;
 
-		$this->load->view('simple/about', $data);
+		$this->load->view( $this->getTemplate() . '/about', $data);
 	}
 
 	public function ketum($id = null, $slug =null)
@@ -65,7 +66,7 @@ class Page extends CI_Controller
 
 		$data['title'] = 'Presiden & Wakil Presiden' . $data['landing'][0]->kabinet;
 
-		$this->load->view('simple/detail/ketum', $data);
+		$this->load->view( $this->getTemplate() . '/detail/ketum', $data);
 	}
 
 	public function kemenkoan($id = null, $slug =null)
@@ -84,7 +85,7 @@ class Page extends CI_Controller
 		$kemenkoan = str_replace("Menko", "Kemnekoan", $data['menko']->jabatan);
 		$data['title'] = $kemenkoan ;
 
-		$this->load->view('simple/detail/kemenkoan', $data);
+		$this->load->view( $this->getTemplate() . '/detail/kemenkoan', $data);
 	}
 
 	public function kementerian($id = null, $slug =null)
@@ -103,7 +104,7 @@ class Page extends CI_Controller
 		$kementerian = str_replace("Menteri", "Kementerian", $data['menteri']->jabatan);
 		$data['title'] = $kementerian ;
 
-		$this->load->view('simple/detail/kementerian', $data);
+		$this->load->view( $this->getTemplate() . '/detail/kementerian', $data);
 	}
 
 	public function booklet($slug = null)
@@ -118,7 +119,7 @@ class Page extends CI_Controller
 		
 		$data['title'] = 'Booklet BEM UNWIKU ' . $data['landing'][0]->slug;
 
-		$this->load->view('simple/detail/booklet', $data);
+		$this->load->view( $this->getTemplate() . '/detail/booklet', $data);
 	}
 
 	public function contact()
@@ -141,7 +142,7 @@ class Page extends CI_Controller
 			$this->contact_form();
 
 			if ($data['landing'][0]->id) {
-				$this->load->view('simple/home', $data);
+				$this->load->view( $this->getTemplate() . '/home', $data);
 			} else {
 				redirect(site_url('/'));
 			}
@@ -149,7 +150,7 @@ class Page extends CI_Controller
 			$data['title'] = 'Arsip BEM UNWIKU';
 			$data['data_landing'] = $this->landing_model->getLandingAndPengurus();
 
-			$this->load->view('simple/detail/arsip', $data);
+			$this->load->view( $this->getTemplate() . '/detail/arsip', $data);
 		}
 	}
 
@@ -165,7 +166,7 @@ class Page extends CI_Controller
 
 			if ($this->form_validation->run() == FALSE) {
 				$this->session->set_flashdata('message', 'Pesan gagal terkirim. Mohon cek kembali data yang anda masukkan');
-				return $this->load->view('simple/home', $data);
+				return $this->load->view( $this->getTemplate() . '/home', $data);
 			}
 
 			$feedback = [
@@ -186,5 +187,11 @@ class Page extends CI_Controller
 				redirect(site_url('/#contact'));
 			}
 		}
+	}
+
+	private function getTemplate() {
+		$templates = $this->templates_model->getTemplateBy('status', 'true');
+
+		return $templates[0]->folder;
 	}
 }
