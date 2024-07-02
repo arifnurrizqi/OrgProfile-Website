@@ -74,7 +74,7 @@
       <div class="w-full px-4">
         <div class="mx-auto mb-16 max-w-xl text-center">
           <h4 class="mb-2 text-lg font-semibold text-primary">Daftar Kabinet</h4>
-          <h2 class="mb-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">BEM UNWIKU</h2>
+          <h2 class="mb-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl"><?= $identitas[0]->nama_website ?></h2>
           <h6 class="mt-2 text-md lg:text-lg text-slate-500 text-center">Dari <span class="font-bold">Tahun ke Tahun</span></h6>
         </div>
       </div>

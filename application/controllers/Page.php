@@ -19,7 +19,7 @@ class Page extends CI_Controller
 		$data['landing'] = $this->landing_model->getLandingBy('status', 'true');
 		$data['data_service'] = $this->service_model->get($data['landing'][0]->id);
 
-		$data['title'] = 'BEM UNWIKU ' . $data['landing'][0]->slug;
+		$data['title'] = $this->identitas_model->get()[0]->nama_website .' ' . $data['landing'][0]->slug;
 
 		// contact form
 		$this->contact_form();
@@ -46,7 +46,7 @@ class Page extends CI_Controller
 		$data['data_presWapres'] = $this->pengurus_model->findPositionByIdLanding('1', $data['landing'][0]->id);
 		$data['data_koordinator'] = $this->pengurus_model->findPositionByIdLanding('2', $data['landing'][0]->id);
 
-		$data['title'] = 'About BEM UNWIKU ' . $data['landing'][0]->slug;
+		$data['title'] = 'About '. $this->identitas_model->get()[0]->nama_website .' ' . $data['landing'][0]->slug;
 
 		$this->load->view( $this->getTemplate() . '/about', $data);
 	}
@@ -137,7 +137,7 @@ class Page extends CI_Controller
 			$data['landing'] = $this->landing_model->getLandingBy('slug', $slug);
 			$data['data_service'] = $this->service_model->get($data['landing'][0]->id);
 			
-			$data['title'] = 'BEM UNWIKU ' . $data['landing'][0]->slug;
+			$data['title'] = $this->identitas_model->get()[0]->nama_website .' ' . $data['landing'][0]->slug;
 
 			$this->contact_form();
 
@@ -147,7 +147,7 @@ class Page extends CI_Controller
 				redirect(site_url('/'));
 			}
 		} else {
-			$data['title'] = 'Arsip BEM UNWIKU';
+			$data['title'] = 'Arsip '.  $this->identitas_model->get()[0]->nama_website;
 			$data['data_landing'] = $this->landing_model->getLandingAndPengurus();
 
 			$this->load->view( $this->getTemplate() . '/detail/arsip', $data);

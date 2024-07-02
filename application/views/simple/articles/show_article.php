@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-	<?php $this->load->view('_partials/head.php'); ?>
+	<?php $this->load->view('simple/_partials/head.php'); ?>
 </head>
 
 <body>
 
-	<?php $this->load->view('_partials/navbar.php'); ?>
+	<?php $this->load->view('simple/_partials/navbar.php'); ?>
 
 	<article class="article">
 		<h1 class="post-title"><?= $article->title ? html_escape($article->title) : "No Title" ?></h1>
@@ -20,7 +20,7 @@
 	</article>
 	
 
-	<?php $this->load->view('_partials/footer.php'); ?>
+	<?php $this->load->view('simple/_partials/footer.php'); ?>
 </body>
 
 </html>

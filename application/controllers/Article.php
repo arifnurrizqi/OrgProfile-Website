@@ -6,7 +6,10 @@ class Article extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('landing_model');
+		$this->load->model('identitas_model');
 		$this->load->model('article_model');
+		$this->load->model('service_model');
 	}
 
 	public function index()
@@ -40,12 +43,15 @@ class Article extends CI_Controller
 			show_404();
 		}
 
+		$data['identitas'] = $this->identitas_model->get();
+		$data['landing'] = $this->landing_model->getLandingBy('status', 'true');
+		$data['data_service'] = $this->service_model->get($data['landing'][0]->id);
+		$data['title'] = $this->article_model->getTitle($slug);
 		$data['article'] = $this->article_model->find_by_slug($slug);
-
 		if (!$data['article']) {
 			show_404();
 		}
 
-		$this->load->view('articles/show_article.php', $data);
+		$this->load->view('simple/articles/show_article.php', $data);
 	}
 }

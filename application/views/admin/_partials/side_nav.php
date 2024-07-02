@@ -15,7 +15,7 @@
 		</svg>
 		<span class="hidden lg:block ">Overview</span>
 	</a>
-	<!-- <a href="<?= site_url('admin/post') ?> " class="<?php echo ($this->uri->segment(2) === 'post') ? 'bg-primary text-white' : ''; ?> p-2 rounded-xl lg:px-4 font-semibold flex gap-2 items-center">
+	<a href="<?= site_url('admin/post') ?> " class="<?php echo ($this->uri->segment(2) === 'post') ? 'bg-primary text-white' : ''; ?> p-2 rounded-xl lg:px-4 font-semibold flex gap-2 items-center">
 		<svg class="h-7" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
 			<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
 			<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -24,7 +24,7 @@
 			</g>
 		</svg>
 		<span class="hidden lg:block">Post</span>
-	</a> -->
+	</a>
 	<a href="<?= site_url('admin/manage') ?> " class="<?php echo ($this->uri->segment(2) === 'manage') ? 'bg-primary text-white' : ''; ?> py-2 px-3 rounded-xl lg:px-4 font-semibold flex gap-2 items-center">
 		<svg class="h-8 <?php echo ($this->uri->segment(2) === 'manage') ? 'fill-white' : 'fill-dark'; ?>" xmlns="http://www.w3.org/2000/svg" viewBox="20 10 60 80" enable-background="new 0 0 98 98" xml:space="preserve">
 			<g id="SVGRepo_bgCarrier" stroke-width="0"></g>

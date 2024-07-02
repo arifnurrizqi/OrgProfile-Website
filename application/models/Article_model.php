@@ -44,6 +44,17 @@ class Article_model extends CI_Model
 		return $query->num_rows();
 	}
 
+	public function getTitle($slug){
+    $q = "SELECT title FROM `$this->_table` WHERE slug = '$slug'";
+    $result = $this->db->query($q)->row(); // Mengambil satu baris hasil query
+
+    if ($result) {
+        return $result->title; // Mengembalikan nilai title
+    } else {
+        return null; // Mengembalikan null jika tidak ada hasil
+    }
+	}
+
 	public function get_published($limit = null, $offset = null)
 	{
 		if (!$limit && $offset) {

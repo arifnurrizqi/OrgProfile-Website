@@ -104,7 +104,7 @@ class Post extends CI_Controller
 			$title = $this->input->post('title');
 			$slug = url_title($this->input->post('title'), 'dash', TRUE);
 
-			$config['upload_path']          = FCPATH . '/upload/artikel/';
+			$config['upload_path']          = FCPATH . '/public/img/artikel/';
 			$config['allowed_types']        = 'gif|jpg|jpeg|png|webp|webp';
 			$config['overwrite']						= true;
 			$config['max_size']             = 5120;

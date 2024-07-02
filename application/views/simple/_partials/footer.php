@@ -8,7 +8,7 @@ $sosmed = explode(",", $allSosmed); ?>
 	<div class="container">
 		<div class="flex flex-wrap">
 			<div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
-				<h2 class="mb-5 text-4xl font-bold text-white">BEM UNWIKU</h2>
+				<h2 class="mb-5 text-4xl font-bold text-white"><?= $identitas[0]->nama_website ?></h2>
 				<h3 class="mb-2 text-2xl font-bold">Hubungi Kami</h3>
 				<a href="mailto:<?= $identitas[0]->email ?>" class="hover:text-primary"><?= $identitas[0]->email ?></a>
 				<p class="mt-2 lg:pr-6"><?= $identitas[0]->address ?></p>
@@ -41,7 +41,7 @@ $sosmed = explode(",", $allSosmed); ?>
 						<a href="<?= base_url('about/' . $this->uri->segment(1)) ?>" class="mb-3 inline-block text-base hover:text-primary">Profile Kabinet</a>
 					</li>
 					<li>
-						<a href="<?= base_url('arsip') ?>" class="mb-3 inline-block text-base hover:text-primary">Sejarah BEM UNWIKU</a>
+						<a href="<?= base_url('arsip') ?>" class="mb-3 inline-block text-base hover:text-primary">Sejarah <?= $identitas[0]->nama_website ?></a>
 					</li>
 				</ul>
 			</div>
@@ -90,7 +90,7 @@ $sosmed = explode(",", $allSosmed); ?>
 			<!-- MEMBIARKAN DAN TIDAK MERUBAH UNTUK LINK INSTAGRAM DAN NAMA DEVELOPER SAMA DENGAN MENGHARGAI JASA DEVELOPER, SILAHKAN KALO MAU MENAMBAHI DENGAN NAMA ANDA -->
 			<p class="text-center text-xs font-medium text-slate-500">
 				Manage by <span class="font-bold">Kementrian Media Komunikasi dan Informasi</span> <br>
-				&copy; 2024 BEM UNWIKU All Right Reserved | Developed with ❤️ in Purwokerto by <a href="https://instagram.com/arifnur.rizqi" target="_blank" class="font-bold text-primary">ARNUR</a>
+				&copy; 2024 <?= $identitas[0]->nama_website ?> All Right Reserved | Developed with ❤️ in Purwokerto by <a href="https://instagram.com/arifnur.rizqi" target="_blank" class="font-bold text-primary">ARNUR</a>
 			</p>
 		</div>
 	</div>
