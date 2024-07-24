@@ -87,7 +87,7 @@
         </div>
       </div>
       <!-- 2019-2020 -->
-      <div class="w-full bg-white rounded-3xl p-8 pb-12 mb-8 flex flex-wrap lg:flex-nowrap dark:bg-dark">
+      <!-- <div class="w-full bg-white rounded-3xl p-8 pb-12 mb-8 flex flex-wrap lg:flex-nowrap dark:bg-dark">
         <div class="mb-8 lg:mb-0 w-full px-4 lg:w-3/5">
           <h4 class="text-lg font-bold uppercase text-primary text-center lg:text-left">Periode</h4>
           <h2 class="my-2 lg:my-3 text-center text-4xl font-bold text-dark dark:text-white lg:text-5xl lg:text-left">2019 - 2020</h2>
@@ -124,9 +124,9 @@
           <img src="<?= base_url('public/img/logo/bangkit-panca-jaya.png') ?>" alt="Logo Kabinet Bangkit Panca Jaya" width="200px" class="rounded-2xl">
           <button class="mx-auto mt-8 w-full" disabled><span class="cursor-not-allowed rounded-full bg-primary py-2 px-6 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Details</span></button>
         </div>
-      </div>
+      </div> -->
       <!-- 2021 -->
-      <div class="w-full bg-white rounded-3xl p-8 pb-12 mb-8 flex flex-wrap lg:flex-nowrap dark:bg-dark">
+      <!-- <div class="w-full bg-white rounded-3xl p-8 pb-12 mb-8 flex flex-wrap lg:flex-nowrap dark:bg-dark">
         <div class="mb-8 lg:mb-0 w-full px-4 lg:w-3/5">
           <h4 class="text-lg font-bold uppercase text-primary text-center lg:text-left">Periode</h4>
           <h2 class="my-2 lg:my-3 text-center text-4xl font-bold text-dark dark:text-white lg:text-5xl lg:text-left">2021</h2>
@@ -163,7 +163,7 @@
           <img src="<?= base_url('public/img/logo/gema-restorasi.png') ?>" alt="Logo Kabinet Gema Restorasi" width="250px" class="rounded-2xl">
           <button class="mx-auto mt-8 w-full" disabled><span class="cursor-not-allowed rounded-full bg-primary py-2 px-6 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Details</span></button>
         </div>
-      </div>
+      </div> -->
 
       <?php
       $groupedData = [];
