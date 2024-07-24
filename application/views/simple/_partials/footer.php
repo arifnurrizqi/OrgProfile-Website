@@ -18,13 +18,13 @@ $sosmed = explode(",", $allSosmed); ?>
 				<h3 class="mb-5 text-xl font-semibold text-white">Kategori Tulisan</h3>
 				<ul class="text-slate-300">
 					<li>
-						<a href="https://news.bemunwiku.com/kategori/detail/press-release" class="mb-3 inline-block text-base hover:text-primary">Press Release</a>
+						<a href="https://news.HIMA-TEunwiku.com/kategori/detail/press-release" class="mb-3 inline-block text-base hover:text-primary">Press Release</a>
 					</li>
 					<li>
-						<a href="https://news.bemunwiku.com/kategori/detail/kajian" class="mb-3 inline-block text-base hover:text-primary">Kajian</a>
+						<a href="https://news.HIMA-TEunwiku.com/kategori/detail/kajian" class="mb-3 inline-block text-base hover:text-primary">Kajian</a>
 					</li>
 					<li>
-						<a href="https://news.bemunwiku.com/postingan" class="mb-3 inline-block text-base hover:text-primary">Semua Tulisan</a>
+						<a href="https://news.HIMA-TEunwiku.com/postingan" class="mb-3 inline-block text-base hover:text-primary">Semua Tulisan</a>
 					</li>
 				</ul>
 			</div>

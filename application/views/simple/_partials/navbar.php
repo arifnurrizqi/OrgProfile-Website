@@ -26,7 +26,7 @@
 							<div id="dropdownContent" class="hidden absolute right-0 lg:left-2 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-52">
 								<div class="px-2 py-2 bg-white rounded-md shadow dark:bg-gray-800">
 									<a class="block px-4 py-2 mt-2 text-sm font-medium bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-300 dark:focus:bg-gray-300 dark:focus:text-white dark:hover:text-primary dark:text-gray-200 md:mt-0 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline hover:text-primary" href="<?php echo ($this->uri->segment(1) != 'about' && $this->uri->segment(1) != 'booklet' && $this->uri->segment(1) != 'arsip' && $this->uri->segment(1) != 'kementerian' && $this->uri->segment(1) != 'kemenkoan' && $this->uri->segment(1) != 'ketum')  ? base_url('about/' . $this->uri->segment(1)) : base_url('about'); ?>">Profile Kabinet</a>
-									<a class="block px-4 py-2 mt-2 text-sm font-medium bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-300 dark:focus:bg-gray-300 dark:focus:text-white dark:hover:text-primary dark:text-gray-200 md:mt-0 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline hover:text-primary" href="<?= base_url('arsip') ?>">Sejarah BEM UNWIKU</a>
+									<a class="block px-4 py-2 mt-2 text-sm font-medium bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-300 dark:focus:bg-gray-300 dark:focus:text-white dark:hover:text-primary dark:text-gray-200 md:mt-0 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline hover:text-primary" href="<?= base_url('arsip') ?>">Sejarah HIMA-TE UNWIKU</a>
 								</div>
 							</div>
 						</div>

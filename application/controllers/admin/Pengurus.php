@@ -29,7 +29,7 @@ class pengurus extends CI_Controller
 
 	public function ketum_form($id = null)
 	{
-		$data['title'] = 'Pres & Wapres';
+		$data['title'] = 'Kahim & Wakahim';
 		$data['pesan'] = $this->feedback_model->check_pesan();
 		$data['landing'] = $this->landing_model->find($id);
 
@@ -130,7 +130,7 @@ class pengurus extends CI_Controller
 			'id_landing' => $id_landing,
 			'level' => '1',
 			'nama' => $namaKetum,
-			'jabatan' => 'Presiden',
+			'jabatan' => 'Ketua Himpunan',
 			'prodi' => $prodiKetum,
 			'angkatan' => $angkatanKetum,
 			'foto' => $uploaded_ketum['file_name'],
@@ -144,7 +144,7 @@ class pengurus extends CI_Controller
 			'id_landing' => $id_landing,
 			'level' => '1',
 			'nama' => $namaWaketum,
-			'jabatan' => 'Wakil Presiden',
+			'jabatan' => 'Wakil Ketua Himpunan',
 			'prodi' => $prodiWaketum,
 			'angkatan' => $angkatanWaketum,
 			'foto' => $uploaded_waketum['file_name'],

@@ -19,7 +19,7 @@
 			<form action="<?= base_url() ?>admin/manage/submit_add" method="POST" enctype="multipart/form-data">
 				<div>
 					<label for="organisasi" class="w-full font-medium text-gray-900 dark:text-white">Nama Organisasi</label>
-					<input type="text" name="organisasi" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary focus:outline-none focus:ring-1 block w-full p-2.5 mt-1 mb-4" placeholder="Masukan nama organisasi" value="Badan Ekesekutif Mahasiswa" required />
+					<input type="text" name="organisasi" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary focus:outline-none focus:ring-1 block w-full p-2.5 mt-1 mb-4" placeholder="Masukan nama organisasi" value="Himpunan Mahasiswa Teknik Elektro" required />
 				</div>
 				<div>
 					<label for="universitas" class="w-full font-medium text-gray-900 dark:text-white">Universitas</label>

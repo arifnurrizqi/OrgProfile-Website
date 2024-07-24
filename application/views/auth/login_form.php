@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Arif Nur Rizqi">
 	<meta name="robots" content="noindex, nofollow">
-	<title>BEM UNWIKU <?= $landing[0]->tahun_periode . ' | Kabinet ' . $landing[0]->kabinet; ?> </title>
+	<title>HIMA-TE UNWIKU <?= $landing[0]->tahun_periode . ' | Kabinet ' . $landing[0]->kabinet; ?> </title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
 	<link href="<?= base_url('public/css/output.css') ?>" rel="stylesheet">
 	<!-- <link href="<?= base_url('public/css/output.css') ?>" rel="stylesheet"> -->
@@ -30,7 +30,7 @@
 		<div class="flex flex-col items-center justify-center px-1 py-8 mx-auto h-screen lg:py-0">
 			<a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
 				<img class="w-8 h-8 mr-2" src="<?= base_url('public/img/favicon.png') ?>" alt="logo">
-				BEM UNWIKU
+				HIMA-TE UNWIKU
 			</a>
 			<div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
 				<div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -82,7 +82,7 @@
 				</div>
 			</div>
 			<span class="text-xs text-center font-semibold py-6 text-secondary">
-				&copy; 2024 BEM UNWIKU All Right Reserved <br> Developed with ❤️ in Purwokerto by <a href="https://instagram.com/arifnur.rizqi" target="_blank" class="font-bold text-primary">ARNUR</a>
+				&copy; 2024 HIMA-TE UNWIKU All Right Reserved <br> Developed with ❤️ in Purwokerto by <a href="https://instagram.com/arifnur.rizqi" target="_blank" class="font-bold text-primary">ARNUR</a>
 			</span>
 		</div>
 	</section>

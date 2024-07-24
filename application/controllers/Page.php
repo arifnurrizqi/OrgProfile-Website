@@ -19,12 +19,12 @@ class Page extends CI_Controller
 		$data['landing'] = $this->landing_model->getLandingBy('status', 'true');
 		$data['data_service'] = $this->service_model->get($data['landing'][0]->id);
 
-		$data['title'] = $this->identitas_model->get()[0]->nama_website .' ' . $data['landing'][0]->slug;
+		$data['title'] = $this->identitas_model->get()[0]->nama_website . ' ' . $data['landing'][0]->slug;
 
 		// contact form
 		$this->contact_form();
 
-		$this->load->view( $this->getTemplate() . '/home', $data);
+		$this->load->view($this->getTemplate() . '/home', $data);
 	}
 
 	public function about($slug = null)
@@ -46,15 +46,15 @@ class Page extends CI_Controller
 		$data['data_presWapres'] = $this->pengurus_model->findPositionByIdLanding('1', $data['landing'][0]->id);
 		$data['data_koordinator'] = $this->pengurus_model->findPositionByIdLanding('2', $data['landing'][0]->id);
 
-		$data['title'] = 'About '. $this->identitas_model->get()[0]->nama_website .' ' . $data['landing'][0]->slug;
+		$data['title'] = 'About ' . $this->identitas_model->get()[0]->nama_website . ' ' . $data['landing'][0]->slug;
 
-		$this->load->view( $this->getTemplate() . '/about', $data);
+		$this->load->view($this->getTemplate() . '/about', $data);
 	}
 
-	public function ketum($id = null, $slug =null)
+	public function ketum($id = null, $slug = null)
 	{
 		$data['identitas'] = $this->identitas_model->get();
-		
+
 		if ($slug != null) {
 			$data['landing'] = $this->landing_model->getLandingBy('slug', $slug);
 		} else {
@@ -64,15 +64,15 @@ class Page extends CI_Controller
 		$data['data_presWapres'] = $this->pengurus_model->findPositionByIdLanding('1', $data['landing'][0]->id);
 		$data['data_koordinator'] = $this->pengurus_model->findPositionByIdLanding('2', $data['landing'][0]->id);
 
-		$data['title'] = 'Presiden & Wakil Presiden' . $data['landing'][0]->kabinet;
+		$data['title'] = 'Ketua Himpunan & Wakil Ketua Himpunan' . $data['landing'][0]->kabinet;
 
-		$this->load->view( $this->getTemplate() . '/detail/ketum', $data);
+		$this->load->view($this->getTemplate() . '/detail/ketum', $data);
 	}
 
-	public function kemenkoan($id = null, $slug =null)
+	public function kemenkoan($id = null, $slug = null)
 	{
 		$data['identitas'] = $this->identitas_model->get();
-		
+
 		if ($slug != null) {
 			$data['landing'] = $this->landing_model->getLandingBy('slug', $slug);
 		} else {
@@ -83,15 +83,15 @@ class Page extends CI_Controller
 		$data['data_menteri'] = $this->pengurus_model->findMenteriByIdKoordinator($id, $data['landing'][0]->id);
 
 		$kemenkoan = str_replace("Menko", "Kemnekoan", $data['menko']->jabatan);
-		$data['title'] = $kemenkoan ;
+		$data['title'] = $kemenkoan;
 
-		$this->load->view( $this->getTemplate() . '/detail/kemenkoan', $data);
+		$this->load->view($this->getTemplate() . '/detail/kemenkoan', $data);
 	}
 
-	public function kementerian($id = null, $slug =null)
+	public function kementerian($id = null, $slug = null)
 	{
 		$data['identitas'] = $this->identitas_model->get();
-		
+
 		if ($slug != null) {
 			$data['landing'] = $this->landing_model->getLandingBy('slug', $slug);
 		} else {
@@ -102,9 +102,9 @@ class Page extends CI_Controller
 		$data['data_staf'] = $this->pengurus_model->findStafByIdMenteri($id, $data['landing'][0]->id);
 
 		$kementerian = str_replace("Menteri", "Kementerian", $data['menteri']->jabatan);
-		$data['title'] = $kementerian ;
+		$data['title'] = $kementerian;
 
-		$this->load->view( $this->getTemplate() . '/detail/kementerian', $data);
+		$this->load->view($this->getTemplate() . '/detail/kementerian', $data);
 	}
 
 	public function booklet($slug = null)
@@ -116,10 +116,10 @@ class Page extends CI_Controller
 		} else {
 			$data['landing'] = $this->landing_model->getLandingBy('status', 'true');
 		}
-		
-		$data['title'] = 'Booklet BEM UNWIKU ' . $data['landing'][0]->slug;
 
-		$this->load->view( $this->getTemplate() . '/detail/booklet', $data);
+		$data['title'] = 'Booklet HIMA-TE UNWIKU ' . $data['landing'][0]->slug;
+
+		$this->load->view($this->getTemplate() . '/detail/booklet', $data);
 	}
 
 	public function contact()
@@ -127,7 +127,7 @@ class Page extends CI_Controller
 		redirect(site_url('/#contact'));
 	}
 
-	public function arsip($slug = null) 
+	public function arsip($slug = null)
 	{
 		$this->load->model('service_model');
 
@@ -136,25 +136,26 @@ class Page extends CI_Controller
 		if ($slug != null) {
 			$data['landing'] = $this->landing_model->getLandingBy('slug', $slug);
 			$data['data_service'] = $this->service_model->get($data['landing'][0]->id);
-			
-			$data['title'] = $this->identitas_model->get()[0]->nama_website .' ' . $data['landing'][0]->slug;
+
+			$data['title'] = $this->identitas_model->get()[0]->nama_website . ' ' . $data['landing'][0]->slug;
 
 			$this->contact_form();
 
 			if ($data['landing'][0]->id) {
-				$this->load->view( $this->getTemplate() . '/home', $data);
+				$this->load->view($this->getTemplate() . '/home', $data);
 			} else {
 				redirect(site_url('/'));
 			}
 		} else {
-			$data['title'] = 'Arsip '.  $this->identitas_model->get()[0]->nama_website;
+			$data['title'] = 'Arsip ' .  $this->identitas_model->get()[0]->nama_website;
 			$data['data_landing'] = $this->landing_model->getLandingAndPengurus();
 
-			$this->load->view( $this->getTemplate() . '/detail/arsip', $data);
+			$this->load->view($this->getTemplate() . '/detail/arsip', $data);
 		}
 	}
 
-	private function contact_form(){
+	private function contact_form()
+	{
 		// contact form
 		$this->load->library('form_validation');
 
@@ -166,7 +167,7 @@ class Page extends CI_Controller
 
 			if ($this->form_validation->run() == FALSE) {
 				$this->session->set_flashdata('message', 'Pesan gagal terkirim. Mohon cek kembali data yang anda masukkan');
-				return $this->load->view( $this->getTemplate() . '/home', $data);
+				return $this->load->view($this->getTemplate() . '/home', $data);
 			}
 
 			$feedback = [
@@ -189,7 +190,8 @@ class Page extends CI_Controller
 		}
 	}
 
-	private function getTemplate() {
+	private function getTemplate()
+	{
 		$templates = $this->templates_model->getTemplateBy('status', 'true');
 
 		return $templates[0]->folder;

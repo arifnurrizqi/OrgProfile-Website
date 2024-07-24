@@ -14,7 +14,7 @@ $sosmed = explode(",", $allSosmed);
 ?>
 
 <!-- Hero Section Start -->
-<section id="home" class="pt-36 dark:bg-dark bg-cover bg-no-repeat bg-bottom" style="background-image: url(<?= base_url('public/img/about/' . $landing[0]->img_cover) ?>)">
+<section id="home" class="pt-36 dark:bg-dark bg-cover bg-no-repeat bg-top" style="background-image: url(<?= base_url('public/img/about/' . $landing[0]->img_cover) ?>)">
 	<div class="pb-32 lg:py-36 bg-gradient-to-t from-white dark:from-dark">
 		<div class="container w-full te">
 			<div class="flex flex-wrap">
@@ -23,7 +23,7 @@ $sosmed = explode(",", $allSosmed);
 					<h1> <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl mb-3 uppercase"><?= $landing[0]->universitas ?></span></h1>
 					<h2 class="mb-5 text-xl font-medium text-slate-600 dark:text-slate-400 lg:text-2xl">Kabinet <span class="text-dark dark:text-white"><?= $landing[0]->kabinet ?></span></h2>
 					<div class="flex items-start flex-wrap">
-						<a href="<?= base_url('booklet/'. $this->uri->segment(2)) ?>" class="<?php echo empty($landing[0]->booklet) ? 'hidden' : '';	?> rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg" target="_blank">Booklet</a>
+						<a href="<?= base_url('booklet/' . $this->uri->segment(2)) ?>" class="<?php echo empty($landing[0]->booklet) ? 'hidden' : '';	?> rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg" target="_blank">Booklet</a>
 						<a href="#about" class="<?php echo empty($landing[0]->filosofi) ? 'hidden' : '';	?> rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">About Kabinet</a>
 						<a href="#fokus-isu" class="<?php echo empty($data_fokusIsu) ? 'hidden' : '';	?> rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Fokus Isu Strategis</a>
 						<a href="#struktur-kabinet" class="rounded-lg m-2 bg-primary py-1.5 px-4 text-lg font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Struktur Kabinet</a>
@@ -40,7 +40,7 @@ $sosmed = explode(",", $allSosmed);
 									<div class="text-left">
 										<p class="font-semibold text-base mb-1"><?php echo str_replace("https://www.instagram.com/", "", $sosmed[0]); ?></p>
 										<p class="font-light text-xs text-gray-1">
-											BEM UNWIKU
+											HIMA-TE UNWIKU
 										</p>
 									</div>
 								</div>
@@ -204,7 +204,7 @@ $sosmed = explode(",", $allSosmed);
 		<div class="w-full px-4">
 			<div class="mx-auto mb-12 max-w-xl text-center">
 				<h4 class="text-lg font-semibold text-primary">Fokus Isu Strategis</h4>
-				<h2 class="mb-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-4xl">BEM UNWIKU <?= $landing[0]->tahun_periode ?></h2>
+				<h2 class="mb-2 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-4xl">HIMA-TE UNWIKU <?= $landing[0]->tahun_periode ?></h2>
 				<p class="text-md font-medium text-secondary md:text-lg">Kabinet <b><?= $landing[0]->kabinet ?></b></p>
 			</div>
 			<div class="flex w-full flex-wrap justify-center md:px-4 gap-8 lg:flex-nowrap">
@@ -305,15 +305,15 @@ $sosmed = explode(",", $allSosmed);
 		<div class="w-full px-4">
 			<div class="mx-auto mb-8 max-w-xl text-center">
 				<h4 class="mb-2 text-lg font-semibold text-primary">Struktur Kabinet</h4>
-				<h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-4xl">BEM UNWIKU <?= $landing[0]->tahun_periode ?></h2>
+				<h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-4xl">HIMA-TE UNWIKU <?= $landing[0]->tahun_periode ?></h2>
 				<p class="text-md font-medium text-secondary md:text-lg">Klik foto untuk melihat informasi detail</p>
 			</div>
 		</div>
 
 		<div class="w-full">
-			<!-- Presiden & Wapres -->
+			<!-- Ketua Himpunan & Wapres -->
 			<div class="max-w-full flex items-center justify-center">
-				<h4 class="w-full lg:max-w-xl text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Presiden & Wakil Presiden</h4>
+				<h4 class="w-full lg:max-w-xl text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Ketua Himpunan & Wakil Ketua Himpunan</h4>
 			</div>
 			<div class="flex w-full gap-6 flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
 				<?php foreach ($data_presWapres as $ketum) : ?>
@@ -378,7 +378,7 @@ $sosmed = explode(",", $allSosmed);
 
 			<!-- Kementerian tanpa Koordinator -->
 			<?php
-				$data_menteri = $this->pengurus_model->findMenteriByIdLanding($landing[0]->id);
+			$data_menteri = $this->pengurus_model->findMenteriByIdLanding($landing[0]->id);
 			?>
 			<div class="<?php echo empty($data_menteri) ? 'hidden' : '';	?> max-w-full mt-8 flex items-center justify-center">
 				<h4 class="w-full lg:max-w-xl text-center rounded-full mx-2 mb-8 bg-gradient-to-tr from-slate-500 to-dark py-2 text-lg font-semibold lg:font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:bg-gradient-to-tr dark:from-slate-500 dark:to-slate-300 dark:text-dark">Menteri Kabinet</h4>

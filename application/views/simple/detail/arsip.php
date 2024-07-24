@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="<?= base_url('public/img/' .  $identitas[0]->favicon) ?>" />
@@ -13,9 +14,9 @@
   <script src="<?= base_url('public/js/alpine.js') ?>" defer></script>
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
+      document.documentElement.classList.add('dark');
     } else {
-        document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove('dark');
     }
   </script>
 </head>
@@ -39,31 +40,31 @@
 <!-- Hero Section End -->
 
 <!-- About kabinet Section Start -->
-<section id="about" class="pt-14 pb-10 lg:pt-36 lg:pb-10 dark:bg-dark <?php echo empty($identitas[0]->description) ? 'hidden' : '';	?>">
-	<div class="container">
-		<div class="flex flex-wrap">
+<section id="about" class="pt-14 pb-10 lg:pt-36 lg:pb-10 dark:bg-dark <?php echo empty($identitas[0]->description) ? 'hidden' : '';  ?>">
+  <div class="container">
+    <div class="flex flex-wrap">
       <div class="w-full p-16 lg:w-2/5 flex items-center flex-wrap gap-0">
         <img src="<?= base_url('public/img/' . $identitas[0]->favicon) ?>" alt="gambar logo <?= ($identitas[0]->nama_website) ?>" class="rounded-full w-full shadow-xl">
-			</div>
-			<div class="mb-10 w-full px-4 lg:w-3/5">
-				<h4 class="mb-3 text-lg font-bold uppercase text-primary">About</h4>
-				<h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl"><?= $identitas[0]->nama_website ?></h2>
-				<?php
-				$longText = $identitas[0]->description;
+      </div>
+      <div class="mb-10 w-full px-4 lg:w-3/5">
+        <h4 class="mb-3 text-lg font-bold uppercase text-primary">About</h4>
+        <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl"><?= $identitas[0]->nama_website ?></h2>
+        <?php
+        $longText = $identitas[0]->description;
 
-				// Memecah teks menjadi array berdasarkan tanda "."
-				$paragraphs = explode("\n", $longText);
+        // Memecah teks menjadi array berdasarkan tanda "."
+        $paragraphs = explode("\n", $longText);
 
-				// Menampilkan tag paragraf HTML untuk setiap elemen array
-				foreach ($paragraphs as $paragraph) {
-					echo "<p class='max-w-2xl text-base font-medium text-secondary lg:text-lg mb-3'>{$paragraph}</p>";
-				}
-				?>
-				<br>
-				<a href="#sejarah" class=" rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Daftar Kepengurusan</a>
-			</div>
-		</div>
-	</div>
+        // Menampilkan tag paragraf HTML untuk setiap elemen array
+        foreach ($paragraphs as $paragraph) {
+          echo "<p class='max-w-2xl text-base font-medium text-secondary lg:text-lg mb-3'>{$paragraph}</p>";
+        }
+        ?>
+        <br>
+        <a href="#sejarah" class=" rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Daftar Kepengurusan</a>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- about Section End -->
 
@@ -99,17 +100,21 @@
               </g>
             </svg>
             <div>
-              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Presiden</h4>
+              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Ketua Himpunan</h4>
               <h5 class="text-dark text-lg font-semibold text-center md:text-left dark:text-white">Alfachry Zhiha Zinda Ihram</h5>
               <p class="text-secondary text-center md:text-left">Program Studi Teknik Sipil 2016</p>
             </div>
           </div>
           <div class="flex w-full md:gap-4 items-center flex-wrap justify-center lg:justify-start">
             <svg class="w-20 fill-dark dark:fill-slate-300 pt-5 pb-3" fill="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-6 0 164 216" enable-background="new 0 0 154 216" xml:space="preserve">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M77.012,2c12.112,0,21.931,9.819,21.931,21.931s-9.819,21.931-21.931,21.931S55.08,36.044,55.08,23.931S64.899,2,77.012,2z M41.037,84.229c0-1.672,1.082-2.802,2.823-2.785c1.527,0.015,2.748,1.289,2.748,2.816v12.206h60.748V84.229 c0-1.66,1.067-2.785,2.785-2.785c1.66,0,2.785,1.067,2.785,2.785v12.236h19.321V78.658c0-15.231-12.445-27.618-27.618-27.618h-5.571 L82.412,76.332l-2.46-19.886l2.46-5.476l-10.823,0.01l2.46,5.466l-2.46,19.886L55.913,51.039h-6.519 c-15.231,0-27.618,12.445-27.618,27.618v17.808h19.3L41.037,84.229z M10.094,56.507l6.803-6.803c0.503,0.111,1.02,0.173,1.548,0.173 c1.912,0,3.708-0.744,5.06-2.096l5.962-5.961c2.789-2.79,2.789-7.33,0-10.12c-1.351-1.352-3.148-2.096-5.06-2.096 c-1.911,0-3.708,0.744-5.06,2.096l-5.962,5.962c-1.734,1.734-2.389,4.144-1.967,6.39l-9.195,9.196v70.758h19.678L33.141,254h87.741 l11.217-129.995h19.678v-21.636H10.094V56.507z"></path> </g>
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M77.012,2c12.112,0,21.931,9.819,21.931,21.931s-9.819,21.931-21.931,21.931S55.08,36.044,55.08,23.931S64.899,2,77.012,2z M41.037,84.229c0-1.672,1.082-2.802,2.823-2.785c1.527,0.015,2.748,1.289,2.748,2.816v12.206h60.748V84.229 c0-1.66,1.067-2.785,2.785-2.785c1.66,0,2.785,1.067,2.785,2.785v12.236h19.321V78.658c0-15.231-12.445-27.618-27.618-27.618h-5.571 L82.412,76.332l-2.46-19.886l2.46-5.476l-10.823,0.01l2.46,5.466l-2.46,19.886L55.913,51.039h-6.519 c-15.231,0-27.618,12.445-27.618,27.618v17.808h19.3L41.037,84.229z M10.094,56.507l6.803-6.803c0.503,0.111,1.02,0.173,1.548,0.173 c1.912,0,3.708-0.744,5.06-2.096l5.962-5.961c2.789-2.79,2.789-7.33,0-10.12c-1.351-1.352-3.148-2.096-5.06-2.096 c-1.911,0-3.708,0.744-5.06,2.096l-5.962,5.962c-1.734,1.734-2.389,4.144-1.967,6.39l-9.195,9.196v70.758h19.678L33.141,254h87.741 l11.217-129.995h19.678v-21.636H10.094V56.507z"></path>
+              </g>
             </svg>
             <div>
-              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Wakil Presiden</h4>
+              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Wakil Ketua Himpunan</h4>
               <h5 class="text-dark text-lg font-semibold text-center md:text-left dark:text-white">Adi Setiawan</h5>
               <p class="text-secondary text-center md:text-left">Program Studi Adm. Negara 2016</p>
             </div>
@@ -134,17 +139,21 @@
               </g>
             </svg>
             <div>
-              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Presiden</h4>
+              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Ketua Himpunan</h4>
               <h5 class="text-dark text-lg font-semibold text-center md:text-left dark:text-white">Batis Reka Guliwan</h5>
               <p class="text-secondary text-center md:text-left">Program Studi Adm. Negara 2018</p>
             </div>
           </div>
           <div class="flex w-full md:gap-4 items-center flex-wrap justify-center lg:justify-start">
             <svg class="w-20 fill-dark dark:fill-slate-300 pt-5 pb-3" fill="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-6 0 164 216" enable-background="new 0 0 154 216" xml:space="preserve">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M77.012,2c12.112,0,21.931,9.819,21.931,21.931s-9.819,21.931-21.931,21.931S55.08,36.044,55.08,23.931S64.899,2,77.012,2z M41.037,84.229c0-1.672,1.082-2.802,2.823-2.785c1.527,0.015,2.748,1.289,2.748,2.816v12.206h60.748V84.229 c0-1.66,1.067-2.785,2.785-2.785c1.66,0,2.785,1.067,2.785,2.785v12.236h19.321V78.658c0-15.231-12.445-27.618-27.618-27.618h-5.571 L82.412,76.332l-2.46-19.886l2.46-5.476l-10.823,0.01l2.46,5.466l-2.46,19.886L55.913,51.039h-6.519 c-15.231,0-27.618,12.445-27.618,27.618v17.808h19.3L41.037,84.229z M10.094,56.507l6.803-6.803c0.503,0.111,1.02,0.173,1.548,0.173 c1.912,0,3.708-0.744,5.06-2.096l5.962-5.961c2.789-2.79,2.789-7.33,0-10.12c-1.351-1.352-3.148-2.096-5.06-2.096 c-1.911,0-3.708,0.744-5.06,2.096l-5.962,5.962c-1.734,1.734-2.389,4.144-1.967,6.39l-9.195,9.196v70.758h19.678L33.141,254h87.741 l11.217-129.995h19.678v-21.636H10.094V56.507z"></path> </g>
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M77.012,2c12.112,0,21.931,9.819,21.931,21.931s-9.819,21.931-21.931,21.931S55.08,36.044,55.08,23.931S64.899,2,77.012,2z M41.037,84.229c0-1.672,1.082-2.802,2.823-2.785c1.527,0.015,2.748,1.289,2.748,2.816v12.206h60.748V84.229 c0-1.66,1.067-2.785,2.785-2.785c1.66,0,2.785,1.067,2.785,2.785v12.236h19.321V78.658c0-15.231-12.445-27.618-27.618-27.618h-5.571 L82.412,76.332l-2.46-19.886l2.46-5.476l-10.823,0.01l2.46,5.466l-2.46,19.886L55.913,51.039h-6.519 c-15.231,0-27.618,12.445-27.618,27.618v17.808h19.3L41.037,84.229z M10.094,56.507l6.803-6.803c0.503,0.111,1.02,0.173,1.548,0.173 c1.912,0,3.708-0.744,5.06-2.096l5.962-5.961c2.789-2.79,2.789-7.33,0-10.12c-1.351-1.352-3.148-2.096-5.06-2.096 c-1.911,0-3.708,0.744-5.06,2.096l-5.962,5.962c-1.734,1.734-2.389,4.144-1.967,6.39l-9.195,9.196v70.758h19.678L33.141,254h87.741 l11.217-129.995h19.678v-21.636H10.094V56.507z"></path>
+              </g>
             </svg>
             <div>
-              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Wakil Presiden</h4>
+              <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left">Wakil Ketua Himpunan</h4>
               <h5 class="text-dark text-lg font-semibold text-center md:text-left dark:text-white">Fajar Felik Pujianto</h5>
               <p class="text-secondary text-center md:text-left">Program Studi Manajemen 2018</p>
             </div>
@@ -156,11 +165,11 @@
         </div>
       </div>
 
-      <?php 
-        $groupedData = [];
-        foreach ($data_landing as $data) {
-          $groupedData[$data->id][] = $data;
-        }
+      <?php
+      $groupedData = [];
+      foreach ($data_landing as $data) {
+        $groupedData[$data->id][] = $data;
+      }
       ?>
 
       <?php foreach ($groupedData as $group) : ?>
@@ -171,8 +180,8 @@
             <p class="text-md font-medium text-secondary md:text-xl text-center lg:text-left">Kabinet <b><?= $group[0]->kabinet ?></b></p>
             <?php foreach ($group as $data) : ?>
               <div class="flex w-full md:gap-4 items-center flex-wrap justify-center lg:justify-start">
-                <!-- <img src="<?php echo (($data->jabatan == 'Presiden')) ?  base_url('public/img/president.png') : base_url('public/img/vice-president.png') ?>" alt="" class="w-20"> -->
-                <?php if ($data->jabatan == 'Presiden') { ?>
+                <!-- <img src="<?php echo (($data->jabatan == 'Ketua Himpunan')) ?  base_url('public/img/Ketua Himpunant.png') : base_url('public/img/vice-Ketua Himpunant.png') ?>" alt="" class="w-20"> -->
+                <?php if ($data->jabatan == 'Ketua Himpunan') { ?>
                   <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 20 154 256" preserveAspectRatio="xMidYMid meet" class="w-20">
                     <g transform="translate(0.100000,256) scale(0.03,-0.0400000)" fill="#aaaa" stroke="none" class="max-w-24 fill-dark dark:fill-slate-300">
                       <path d="M2281 4864 c-253 -68 -410 -331 -346 -579 67 -256 329 -415 580 -350 256 67 415 329 350 578 -67 259 -333 419 -584 351z"></path>
@@ -180,7 +189,13 @@
                     </g>
                   </svg>
                 <?php } else { ?>
-                  <svg class="w-20 fill-dark dark:fill-slate-300 pt-5 pb-3" fill="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-6 0 164 216" enable-background="new 0 0 154 216" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M77.012,2c12.112,0,21.931,9.819,21.931,21.931s-9.819,21.931-21.931,21.931S55.08,36.044,55.08,23.931S64.899,2,77.012,2z M41.037,84.229c0-1.672,1.082-2.802,2.823-2.785c1.527,0.015,2.748,1.289,2.748,2.816v12.206h60.748V84.229 c0-1.66,1.067-2.785,2.785-2.785c1.66,0,2.785,1.067,2.785,2.785v12.236h19.321V78.658c0-15.231-12.445-27.618-27.618-27.618h-5.571 L82.412,76.332l-2.46-19.886l2.46-5.476l-10.823,0.01l2.46,5.466l-2.46,19.886L55.913,51.039h-6.519 c-15.231,0-27.618,12.445-27.618,27.618v17.808h19.3L41.037,84.229z M10.094,56.507l6.803-6.803c0.503,0.111,1.02,0.173,1.548,0.173 c1.912,0,3.708-0.744,5.06-2.096l5.962-5.961c2.789-2.79,2.789-7.33,0-10.12c-1.351-1.352-3.148-2.096-5.06-2.096 c-1.911,0-3.708,0.744-5.06,2.096l-5.962,5.962c-1.734,1.734-2.389,4.144-1.967,6.39l-9.195,9.196v70.758h19.678L33.141,254h87.741 l11.217-129.995h19.678v-21.636H10.094V56.507z"></path> </g></svg>
+                  <svg class="w-20 fill-dark dark:fill-slate-300 pt-5 pb-3" fill="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-6 0 164 216" enable-background="new 0 0 154 216" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path d="M77.012,2c12.112,0,21.931,9.819,21.931,21.931s-9.819,21.931-21.931,21.931S55.08,36.044,55.08,23.931S64.899,2,77.012,2z M41.037,84.229c0-1.672,1.082-2.802,2.823-2.785c1.527,0.015,2.748,1.289,2.748,2.816v12.206h60.748V84.229 c0-1.66,1.067-2.785,2.785-2.785c1.66,0,2.785,1.067,2.785,2.785v12.236h19.321V78.658c0-15.231-12.445-27.618-27.618-27.618h-5.571 L82.412,76.332l-2.46-19.886l2.46-5.476l-10.823,0.01l2.46,5.466l-2.46,19.886L55.913,51.039h-6.519 c-15.231,0-27.618,12.445-27.618,27.618v17.808h19.3L41.037,84.229z M10.094,56.507l6.803-6.803c0.503,0.111,1.02,0.173,1.548,0.173 c1.912,0,3.708-0.744,5.06-2.096l5.962-5.961c2.789-2.79,2.789-7.33,0-10.12c-1.351-1.352-3.148-2.096-5.06-2.096 c-1.911,0-3.708,0.744-5.06,2.096l-5.962,5.962c-1.734,1.734-2.389,4.144-1.967,6.39l-9.195,9.196v70.758h19.678L33.141,254h87.741 l11.217-129.995h19.678v-21.636H10.094V56.507z"></path>
+                    </g>
+                  </svg>
                 <?php } ?>
                 <div>
                   <h4 class="uppercase font-bold text-lg text-primary text-center md:text-left"><?= $data->jabatan ?></h4>
@@ -191,8 +206,8 @@
             <?php endforeach ?>
           </div>
           <div class="w-full lg:pt-10 lg:w-2/5 flex items-center justify-center flex-wrap gap-0">
-            <img src="<?= base_url('public/img/logo/'. $group[0]->logo) ?>" alt="Logo <?= $group[0]->kabinet ?>" width="250px" class="rounded-2xl">
-            <button class="mx-auto mt-8 w-full"><a href="<?= base_url('about/'. $group[0]->slug) ?>" target="_blank" class=" rounded-full bg-primary py-2 px-6 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Details</a></button>
+            <img src="<?= base_url('public/img/logo/' . $group[0]->logo) ?>" alt="Logo <?= $group[0]->kabinet ?>" width="250px" class="rounded-2xl">
+            <button class="mx-auto mt-8 w-full"><a href="<?= base_url('about/' . $group[0]->slug) ?>" target="_blank" class=" rounded-full bg-primary py-2 px-6 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Details</a></button>
           </div>
         </div>
       <?php endforeach ?>
@@ -204,7 +219,7 @@
 <!-- Footer Start -->
 <?php $this->load->view('simple/_partials/footer.php'); ?>
 
- 
+
 </body>
 
 </html>

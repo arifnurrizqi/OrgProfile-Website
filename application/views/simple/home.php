@@ -56,7 +56,7 @@
 			<div class="w-full px-4 lg:w-2/5">
 				<h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Ikuti Kami</h3>
 				<p class="mb-6 text-base font-medium text-secondary lg:text-lg">
-					Kami sebagai BEM Unwiku. Kami berkomitmen untuk berkontribusi demi kejayaan Universitas Wijayakusuma Purwokerto. Saksikan dan ikuti setiap langkah serta kisah kami.
+					Kami sebagai HIMA-TE Unwiku. Kami berkomitmen untuk berkontribusi demi kejayaan Universitas Wijayakusuma Purwokerto. Saksikan dan ikuti setiap langkah serta kisah kami.
 				</p>
 				<div class="flex items-center">
 					<?php
@@ -128,7 +128,7 @@
 		</div>
 
 		<div class="w-full px-4 flex items-center justify-center">
-			<a href="https://blog.bemunwiku.com/kategori/detail/kajian" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Load More</a>
+			<a href="https://blog.HIMA-TEunwiku.com/kategori/detail/kajian" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Load More</a>
 		</div>
 	</div>
 </section>
@@ -176,7 +176,7 @@
 		</div>
 
 		<div class="w-full px-4 flex items-center justify-center">
-			<a href="https://news.bemunwiku.com/" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Load More</a>
+			<a href="https://news.HIMA-TEunwiku.com/" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Load More</a>
 		</div>
 	</div>
 </section>
@@ -257,7 +257,7 @@
 
 <?php $this->load->view('simple/_partials/footer.php'); ?>
 
- 
+
 
 <script>
 	const successAlert = document.querySelector('#alert-success');

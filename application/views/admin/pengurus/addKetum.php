@@ -14,10 +14,10 @@
 
       <?php $this->load->view('admin/_partials/topbar.php') ?>
 
-      <h1 class="text-xl font-bold lg:mb-2.5">Tambah Presiden dan Wakil Presiden BEM</h1>
+      <h1 class="text-xl font-bold lg:mb-2.5">Tambah Ketua Himpunan dan Wakil Ketua Himpunan HIMA-TE</h1>
 
       <form action="<?= base_url() ?>admin/pengurus/submit_addKetum" method="POST" enctype="multipart/form-data">
-        <h3 class=" font-bold mb-2">Masukan detail Presiden BEM</h3>
+        <h3 class=" font-bold mb-2">Masukan detail Ketua Himpunan HIMA-TE</h3>
         <div>
           <label for="namaKetum" class="w-full font-medium text-gray-900 dark:text-white">Nama Lengkap</label>
           <input type="hidden" name="id_landing" value="<?= $landing->id; ?>">
@@ -101,7 +101,7 @@
           <?php endif; ?>
         </div>
         <!-- wapress form start-->
-        <h3 class="font-bold mb-2 mt-4">Masukan detail Wakil Presiden BEM</h3>
+        <h3 class="font-bold mb-2 mt-4">Masukan detail Wakil Ketua Himpunan HIMA-TE</h3>
         <div>
           <label for="namaWaketum" class="w-full font-medium text-gray-900 dark:text-white">Nama Lengkap</label>
           <input type="hidden" name="id_landing" value="<?= $landing->id; ?>">
