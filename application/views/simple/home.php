@@ -111,13 +111,13 @@
 </section>
 <!-- about Section End -->
 
-<!-- kajian Section Start -->
+<!-- Activity Section Start -->
 <section id="kajian" class="bg-slate-100 pt-28 lg:pt-32 pb-20 dark:bg-slate-800">
 	<div class="container">
 		<div class="w-full px-4">
 			<div class="mx-auto mb-16 max-w-xl text-center">
-				<h4 class="mb-2 text-lg font-semibold text-primary">Study</h4>
-				<h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Kajian Terbaru</h2>
+				<h4 class="mb-2 text-lg font-semibold text-primary">Activity</h4>
+				<h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">Aktivitas Terbaru</h2>
 				<!-- <p class="text-md font-medium text-secondary md:text-lg">
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus porro consequuntur alias, commodi nemo enim aliquam ipsam obcaecati? Assumenda, ipsam?
 				</p> -->
@@ -125,14 +125,36 @@
 		</div>
 
 		<div class="flex w-full flex-wrap justify-center xl:mx-auto xl:w-10/12" id="cards-kajian-container">
+			<?php foreach ($data_aktifitas as $aktifitas) : ?>
+				<div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-900">
+					<img src="<?= base_url('public/img/artikel/' . $aktifitas->gambar) ?>" alt="<?= $aktifitas->keterangan_gambar ?>" class="object-cover shadow-sm w-full h-auto md:h-72" />
+					<div class="py-8 px-6">
+						<h3>
+							<a href="<?= base_url('article/'. $aktifitas->slug) ?>" target="_blank" class="mb-2 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"><?= $aktifitas->title ?></a>
+						</h3>
+						<div class="w-full flex items-center gap-2">
+							<svg class="w-4 h-4 text-gray-400 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+								<path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 6v4l3.276 3.276M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+							</svg>
+							<p class="text-sm text-gray-400"><?= $aktifitas->created_at ?></p>
+						</div>
+						<div class="mb-4 mt-2 text-base font-medium text-secondary"><?= $aktifitas->content ?></div>
+						<a href="<?= base_url('article/'. $aktifitas->slug) ?>" target="_blank" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-primary/30 dark:focus:ring-primary transition duration-500 hover:opacity-80 hover:shadow-lg">Baca Selengkapnya
+							<svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			<?php endforeach ?>
 		</div>
 
 		<div class="w-full px-4 flex items-center justify-center">
-			<a href="https://blog.HIMA-TEunwiku.com/kategori/detail/kajian" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Load More</a>
+			<a href="<?= base_url('/kategori/activity') ?>" target="_blank" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">Load More</a>
 		</div>
 	</div>
 </section>
-<!-- kajian Section End -->
+<!-- Activity Section End -->
 
 <!-- layanan Section Start -->
 <section id="layanan" class="bg-slate-800 pt-28 pb-32 dark:bg-slate-300">
@@ -141,7 +163,7 @@
 			<div class="mx-auto mb-16 text-center">
 				<h4 class="mb-2 text-lg font-semibold text-primary">Services</h4>
 				<h2 class="mb-4 text-3xl font-bold text-white dark:text-dark sm:text-4xl lg:text-5xl">Layanan Yang Kami Sediakan</h2>
-				<p class="text-md font-medium text-secondary md:text-lg">Kawan bandhajoenda apabila ada hal-hal yang perlu disampaikan, jangan risau dan khawatir bisa hubungi layanan di bawah ini.</p>
+				<p class="text-md font-medium text-secondary md:text-lg">Kawan elektro apabila ada hal-hal yang perlu disampaikan, jangan risau dan khawatir bisa hubungi layanan di bawah ini.</p>
 			</div>
 		</div>
 

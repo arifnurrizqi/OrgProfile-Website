@@ -33,6 +33,15 @@ class Article_model extends CI_Model
 		return $query->result();
 	}
 
+	public function getByCategories($limit = null, $categories = null)
+	{
+		$q = "SELECT a.id, k.nama_kategori, a.title, a.slug, a.content, a.gambar, a.gambar, a.keterangan_gambar, a.created_at  
+		FROM `article` AS a INNER JOIN `kategori` AS k ON 
+		a.id_kategori = k.id 
+		WHERE k.nama_kategori = '$categories' LIMIT $limit";
+		return $this->db->query($q)->result();
+	}
+
 	public function count()
 	{
 		return $this->db->count_all($this->_table);

@@ -7,6 +7,7 @@ class Page extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('landing_model');
+		$this->load->model('article_model');
 		$this->load->model('identitas_model');
 		$this->load->model('feedback_model');
 		$this->load->model('templates_model');
@@ -17,6 +18,7 @@ class Page extends CI_Controller
 
 		$data['identitas'] = $this->identitas_model->get();
 		$data['landing'] = $this->landing_model->getLandingBy('status', 'true');
+		$data['data_aktifitas'] = $this->article_model->getByCategories(4, 'activity');
 		$data['data_service'] = $this->service_model->get($data['landing'][0]->id);
 
 		$data['title'] = $this->identitas_model->get()[0]->nama_website . ' ' . $data['landing'][0]->slug;
